@@ -90,10 +90,10 @@ function JobDetail({ site, id }){
 
               <div className="prose">
                 <p>{job.desc.intro}</p>
-                <h3>What you’ll do</h3>
-                <ul>{job.desc.resp.map((r,i)=><li key={i}>{r}</li>)}</ul>
-                <h3>What we’re looking for</h3>
-                <ul>{job.desc.reqs.map((r,i)=><li key={i}>{r}</li>)}</ul>
+                {job.desc.resp.length>0 && <><h3>What you’ll do</h3>
+                <ul>{job.desc.resp.map((r,i)=><li key={i}>{r}</li>)}</ul></>}
+                {job.desc.reqs.length>0 && <><h3>What we’re looking for</h3>
+                <ul>{job.desc.reqs.map((r,i)=><li key={i}>{r}</li>)}</ul></>}
                 <h3>Benefits</h3>
                 <div style={{display:'flex',flexWrap:'wrap',gap:10}}>
                   {site.benefits.map(b=><span key={b} className="tag" style={{padding:'7px 12px'}}><Icon name="check" size={13} style={{color:'var(--accent)'}}/> {b}</span>)}
@@ -119,7 +119,9 @@ function JobDetail({ site, id }){
                   <div style={{color:'var(--ink-3)',fontSize:13,fontWeight:600,fontFamily:'var(--font-head)',textTransform:'uppercase',letterSpacing:'.06em'}}>Salary</div>
                   <div className="jc-salary tnum" style={{fontSize:26,marginTop:6}}>{fmtSalary(job)}</div>
                   {job.hourly && <div style={{color:'var(--ink-3)',fontSize:13,marginTop:4}}>≈ {fmtMoney(job.salLo)} – {fmtMoney(job.salHi)} / yr</div>}
-                  <button className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} onClick={()=>setApplying(true)}>Apply now</button>
+                  {job.applyUrl
+                    ? <a className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} href={job.applyUrl} target="_blank" rel="noopener noreferrer">Apply now <Icon name="arrowUpRight" size={16}/></a>
+                    : <button className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} onClick={()=>setApplying(true)}>Apply now</button>}
                   <button className="btn btn-ghost btn-block" style={{marginTop:10}} onClick={()=>setSaved(s=>!s)}>
                     <Icon name="heart" size={16} style={saved?{color:'var(--accent)'}:undefined}/> {saved?'Saved':'Save job'}
                   </button>

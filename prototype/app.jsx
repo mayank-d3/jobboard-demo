@@ -121,6 +121,7 @@ const RADIUS = { sharp:0.28, rounded:0.7, soft:1.05 };
 function App(){
   const [route,setRoute] = useState(parseHash());
   const [t,setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [liveVer,setLiveVer] = useState(0); // bump to re-render after live/snapshot jobs load
 
   useEffect(()=>{
     const h = ()=> setRoute(parseHash());
@@ -136,6 +137,17 @@ function App(){
   },[t.site]);
 
   useEffect(()=>{ document.title = route.site && SITES[route.site] ? SITES[route.site].name : 'Job Board — Template Prototype'; },[route.site, route.page]);
+
+  // Load real jobs for the current site (Tier A: static snapshot; Phase 2: swap URL to '/api/jobs?site=' + route.site).
+  useEffect(()=>{
+    if(!route.site || !SITES[route.site]) return;
+    let cancelled = false;
+    fetch('./jobs-' + route.site + '.json')
+      .then(r=> r.ok ? r.json() : null)
+      .then(d=>{ const jobs = (d && d.jobs) || d; if(!cancelled && jobs && jobs.length){ window.applyLiveJobs(route.site, jobs); setLiveVer(v=>v+1); } })
+      .catch(()=>{}); // keep mock fallback on any failure
+    return ()=>{ cancelled = true; };
+  },[route.site]);
 
 
   const onSite = !!route.site && !!SITES[route.site];

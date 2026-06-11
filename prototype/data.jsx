@@ -329,10 +329,12 @@ Object.keys(VERTICALS).forEach(k=>{
 /* ---------- formatting helpers ---------- */
 function fmtMoney(n){ return '$' + n.toLocaleString('en-US'); }
 function fmtSalary(j){
+  if(j.salLo==null && !j.hourly) return 'Salary not listed';
   if(j.hourly) return `$${j.hourly.lo} – $${j.hourly.hi}/hr`;
   return `${fmtMoney(j.salLo)} – ${fmtMoney(j.salHi)}`;
 }
 function fmtSalaryShort(j){
+  if(j.salLo==null && !j.hourly) return 'Salary not listed';
   if(j.hourly) return `$${j.hourly.lo}–${j.hourly.hi}/hr`;
   return `$${Math.round(j.salLo/1000)}k – $${Math.round(j.salHi/1000)}k`;
 }
@@ -366,3 +368,6 @@ Object.assign(window, {
   jobsForCity, getJob, getEmployer, relatedJobs,
   monoColor, initials, slug,
 });
+
+// Overwrite a site's jobs with live/snapshot results (everything reads window.SITES).
+window.applyLiveJobs = function(key, jobs){ if (SITES[key] && jobs && jobs.length) SITES[key].jobs = jobs; };
