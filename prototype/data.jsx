@@ -331,11 +331,13 @@ function fmtMoney(n){ return '$' + n.toLocaleString('en-US'); }
 function fmtSalary(j){
   if(j.salLo==null && !j.hourly) return 'Salary not listed';
   if(j.hourly) return `$${j.hourly.lo} – $${j.hourly.hi}/hr`;
+  if(j.salLo===j.salHi) return fmtMoney(j.salLo);
   return `${fmtMoney(j.salLo)} – ${fmtMoney(j.salHi)}`;
 }
 function fmtSalaryShort(j){
   if(j.salLo==null && !j.hourly) return 'Salary not listed';
   if(j.hourly) return `$${j.hourly.lo}–${j.hourly.hi}/hr`;
+  if(j.salLo===j.salHi) return `$${Math.round(j.salLo/1000)}k`;
   return `$${Math.round(j.salLo/1000)}k – $${Math.round(j.salHi/1000)}k`;
 }
 function fmtPosted(d){

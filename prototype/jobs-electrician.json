@@ -3,214 +3,6 @@
   "count": 24,
   "jobs": [
     {
-      "id": "adz-5731488638",
-      "title": "Electrician",
-      "company": "Corteva Agriscience",
-      "companyId": "corteva-agriscience",
-      "city": "York",
-      "st": "NE",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 80271,
-      "salHi": 80271,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 26,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "NOW OFFERING $5,000 SIGN ON BONUS – offered to external hires only At Corteva Agriscience , you will help us grow what’s next. No matter what your role, you will be part of a team that is building the future of agriculture – solving the world’s food problems through innovation, technology, and putting people first. We have an exciting opportunity for a Maintenance Electrician at our York Nebraska production location. In this position, you will utilize your electrical skills to perform high-leve…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5731488638?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=498DB2974A708ACB5AABBE3D51A27F66632C3607"
-    },
-    {
-      "id": "adz-5755879156",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Richland",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 44882,
-      "salHi": 44882,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755879156?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=954263C879707985FE2D833FE05B1A1C22FC29D4"
-    },
-    {
-      "id": "adz-5755878961",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Marshall",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 56051,
-      "salHi": 56051,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755878961?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=10377C7A57B08880D3E3118DC49AD02D6B631840"
-    },
-    {
-      "id": "adz-5755881795",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Delton",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 50178,
-      "salHi": 50178,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755881795?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=7531C1D56134D6C5DB39F152C995E10702398DDC"
-    },
-    {
-      "id": "adz-5755880713",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Springfield",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 54235,
-      "salHi": 54235,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755880713?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=319165D3861E51E343294A7DFB1E7872E77403D6"
-    },
-    {
-      "id": "adz-5755881606",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Bedford",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 65564,
-      "salHi": 65564,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755881606?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=FE829A981E6E2A7FB0C84AF3290D456B43844F4E"
-    },
-    {
-      "id": "adz-5755881462",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Bellevue",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 51124,
-      "salHi": 51124,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755881462?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=6E8C28894A89C7AB13B5742A0DC04BC1499538C4"
-    },
-    {
-      "id": "adz-5755876570",
-      "title": "Journeyman Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Comstock",
-      "st": "MI",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 58173,
-      "salHi": 58173,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 4,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Do you hold a Journeyman Electrician card? Are you licensed with the State of Michigan? W…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755876570?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=B158769063620C2BBDD40CFB243EC5DA4DEA4727"
-    },
-    {
       "id": "adz-5755839572",
       "title": "Journeyman Electrician",
       "company": "WestRock",
@@ -225,7 +17,7 @@
       "salUnit": "yr",
       "hourly": null,
       "posted": 4,
-      "featured": false,
+      "featured": true,
       "tags": [
         "Full-time"
       ],
@@ -234,7 +26,111 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755839572?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=189B46A3749A90AB43F12C48638CDF8157C66FC0"
+      "applyUrl": "https://www.adzuna.com/land/ad/5755839572?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=189B46A3749A90AB43F12C48638CDF8157C66FC0"
+    },
+    {
+      "id": "adz-5686558014",
+      "title": "Industrial Electrician",
+      "company": "Corteva Agriscience",
+      "companyId": "corteva-agriscience",
+      "city": "Woodhull",
+      "st": "IL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 53768,
+      "salHi": 53768,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 71,
+      "featured": true,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Sign-On Bonus of $3,500 (Not applicable for Internal Employees) Who We Are and What We Do: At Corteva Agriscience , you will help us grow what is next! No matter your role, you will be part of a team that is building the future of agriculture – leading breakthroughs in the innovation and application of science and technology that will better the lives of people all over the world and fuel the progress of humankind. Corteva Agriscience has an exciting opportunity for an Electrician to join our t…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5686558014?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=F410434E42D4D21E75E9D0518D688119336BECB2"
+    },
+    {
+      "id": "adz-5729264497",
+      "title": "Electrician B",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "Bellwood",
+      "st": "NE",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 53283,
+      "salHi": 53283,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": true,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729264497?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=61E9570D6C296B1DAB02C0DD1B006BAAF4C4A337"
+    },
+    {
+      "id": "adz-5723658004",
+      "title": "Electrician",
+      "company": "West Fraser",
+      "companyId": "west-fraser",
+      "city": "Little Rock",
+      "st": "AR",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 67246,
+      "salHi": 67246,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 34,
+      "featured": true,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "$1500 Employee Referral Program ELECTRICIAN This role offers a challenging, diverse and exciting opportunity to become part of our Maintenance team. In general, all Electrician roles are required to repair, install, replace, program, and test all electrical circuits, and equipment. Periodically perform or assist others in routine to moderately complex repairs or installation of automatic electrical and electronic controls. What you will do: Perform routine electrical/electronic preventative mai…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5723658004?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=077421B0145BD9E3E03CB46F50BE1F34B94A15E9"
+    },
+    {
+      "id": "adz-5735224717",
+      "title": "Electrician",
+      "company": "Faith Technologies",
+      "companyId": "faith-technologies",
+      "city": "Menasha",
+      "st": "WI",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 100429,
+      "salHi": 100429,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": true,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "You’ve discovered something special. A company that cares. Cares about leading the way in construction, engineering, manufacturing and renewable energy. Cares about redefining how energy is designed, applied and consumed. Cares about thoughtfully growing to meet market demands. And ─ as “one of the Healthiest 100 Workplaces in America” ─ is focused on the mind/body/soul of team members through our Culture of Care . The Licensed Electrician I is responsible for electrical installations, troubles…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735224717?se=uF5o7LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=95309E9200789B0BABB99366A58B0D412FD0483F"
     },
     {
       "id": "adz-5665330792",
@@ -251,7 +147,7 @@
       "salUnit": "yr",
       "hourly": null,
       "posted": 89,
-      "featured": false,
+      "featured": true,
       "tags": [
         "Full-time"
       ],
@@ -260,7 +156,111 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330792?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=237371CC037B8D29804C89E90A3FB6B34950B8E8"
+      "applyUrl": "https://www.adzuna.com/land/ad/5665330792?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=237371CC037B8D29804C89E90A3FB6B34950B8E8"
+    },
+    {
+      "id": "adz-5647882736",
+      "title": "Industrial Maintenance Electrician",
+      "company": "Corteva Agriscience",
+      "companyId": "corteva-agriscience",
+      "city": "Woodhull",
+      "st": "IL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 51920,
+      "salHi": 51920,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 104,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Sign-On Bonus of $3,500 (Not applicable for Internal Employees) Who We Are and What We Do: At Corteva Agriscience , you will help us grow what is next! No matter your role, you will be part of a team that is building the future of agriculture – leading breakthroughs in the innovation and application of science and technology that will better the lives of people all over the world and fuel the progress of humankind. Corteva Agriscience has an exciting opportunity for an Electrician to join our t…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5647882736?se=-BkD7bNl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=3FBC5BA56CB94CB0FEBD5C5162DA2FD4A3A7A737"
+    },
+    {
+      "id": "adz-5729264800",
+      "title": "Licensed Electrician",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "Abie",
+      "st": "NE",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 56604,
+      "salHi": 56604,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729264800?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=B3598BAD0AE4BDE8D9751BADCCB19DE45917114D"
+    },
+    {
+      "id": "adz-5755503115",
+      "title": "Electrician",
+      "company": "West Fraser",
+      "companyId": "west-fraser",
+      "city": "White Hall",
+      "st": "AR",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 69050,
+      "salHi": 69050,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 4,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "$1500 Employee Referral Program ELECTRICIAN This role offers a challenging, diverse and exciting opportunity to become part of our Maintenance team. In general, all Electrician roles are required to repair, install, replace, program, and test all electrical circuits, and equipment. Periodically perform or assist others in routine to moderately complex repairs or installation of automatic electrical and electronic controls. What you will do: Perform routine electrical/electronic preventative mai…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5755503115?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=56490D9668916BC3114EFA8F408CF5FFFE6C13C1"
+    },
+    {
+      "id": "adz-5735225474",
+      "title": "Electrician",
+      "company": "Faith Technologies",
+      "companyId": "faith-technologies",
+      "city": "Kohler",
+      "st": "WI",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 107483,
+      "salHi": 107483,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "You’ve discovered something special. A company that cares. Cares about leading the way in construction, engineering, manufacturing and renewable energy. Cares about redefining how energy is designed, applied and consumed. Cares about thoughtfully growing to meet market demands. And ─ as “one of the Healthiest 100 Workplaces in America” ─ is focused on the mind/body/soul of team members through our Culture of Care . The Licensed Electrician I is responsible for electrical installations, troubles…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735225474?se=uF5o7LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=5BD88B8764882B98657E3745E21A31FCD455C0A8"
     },
     {
       "id": "adz-5682211257",
@@ -286,7 +286,85 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5682211257?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=782EFD0DC2BD364DB938EE5579898BF081914DAE"
+      "applyUrl": "https://www.adzuna.com/land/ad/5682211257?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=782EFD0DC2BD364DB938EE5579898BF081914DAE"
+    },
+    {
+      "id": "adz-5729265473",
+      "title": "Electrician B",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "Clarkson",
+      "st": "NE",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 49049,
+      "salHi": 49049,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729265473?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=0147968D8F4E298D2300AF300353BE346DD67CBC"
+    },
+    {
+      "id": "adz-5755503300",
+      "title": "Electrician",
+      "company": "West Fraser",
+      "companyId": "west-fraser",
+      "city": "Sweet Home",
+      "st": "AR",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 73189,
+      "salHi": 73189,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 4,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "$1500 Employee Referral Program ELECTRICIAN This role offers a challenging, diverse and exciting opportunity to become part of our Maintenance team. In general, all Electrician roles are required to repair, install, replace, program, and test all electrical circuits, and equipment. Periodically perform or assist others in routine to moderately complex repairs or installation of automatic electrical and electronic controls. What you will do: Perform routine electrical/electronic preventative mai…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5755503300?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=E2CF0C86FCF10432CAC0F5CD30AB22CA4C16D7C9"
+    },
+    {
+      "id": "adz-5735214457",
+      "title": "Electrician",
+      "company": "Faith Technologies",
+      "companyId": "faith-technologies",
+      "city": "Kansas",
+      "st": "MO",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 134333,
+      "salHi": 134333,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "You’ve discovered something special. A company that cares. Cares about leading the way in construction, engineering, manufacturing and renewable energy. Cares about redefining how energy is designed, applied and consumed. Cares about thoughtfully growing to meet market demands. And ─ as “one of the Healthiest 100 Workplaces in America” ─ is focused on the mind/body/soul of team members through our Culture of Care . The Licensed Electrician I is responsible for electrical installations, troubles…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735214457?se=uF5o7LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=1946DCE333630EA435D7C97860535731FA298C96"
     },
     {
       "id": "adz-5665330908",
@@ -312,7 +390,85 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330908?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=13354251B57AAF11485CCD2ECE8AA63FD2307B72"
+      "applyUrl": "https://www.adzuna.com/land/ad/5665330908?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=13354251B57AAF11485CCD2ECE8AA63FD2307B72"
+    },
+    {
+      "id": "adz-5729265783",
+      "title": "Certified Electrician",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "Brainard",
+      "st": "NE",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 52431,
+      "salHi": 52431,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729265783?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=EB444D7FCED8472C9C2B15B637A92D4EC1F7E283"
+    },
+    {
+      "id": "adz-5755503536",
+      "title": "Electrician",
+      "company": "West Fraser",
+      "companyId": "west-fraser",
+      "city": "Hot Springs Village",
+      "st": "AR",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 67000,
+      "salHi": 67000,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 4,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "$1500 Employee Referral Program ELECTRICIAN This role offers a challenging, diverse and exciting opportunity to become part of our Maintenance team. In general, all Electrician roles are required to repair, install, replace, program, and test all electrical circuits, and equipment. Periodically perform or assist others in routine to moderately complex repairs or installation of automatic electrical and electronic controls. What you will do: Perform routine electrical/electronic preventative mai…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5755503536?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=358EDC2EFA80960E3D1ED10B4EE16C4678B6D2EA"
+    },
+    {
+      "id": "adz-5735217810",
+      "title": "Electrician",
+      "company": "Faith Technologies",
+      "companyId": "faith-technologies",
+      "city": "Montgomery",
+      "st": "AL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 112395,
+      "salHi": 112395,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "You’ve discovered something special. A company that cares. Cares about leading the way in construction, engineering, manufacturing and renewable energy. Cares about redefining how energy is designed, applied and consumed. Cares about thoughtfully growing to meet market demands. And ─ as “one of the Healthiest 100 Workplaces in America” ─ is focused on the mind/body/soul of team members through our Culture of Care . The Licensed Electrician I is responsible for electrical installations, troubles…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735217810?se=uF5o7LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=A2D4BD3D2F1E70F002CB4FD05DD7FDCBEDE83181"
     },
     {
       "id": "adz-5665330871",
@@ -338,7 +494,85 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330871?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=D5F0BC43F501FC87F90160317556113F4AA2A27C"
+      "applyUrl": "https://www.adzuna.com/land/ad/5665330871?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=D5F0BC43F501FC87F90160317556113F4AA2A27C"
+    },
+    {
+      "id": "adz-5729264460",
+      "title": "Licensed Electrician",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "David City",
+      "st": "NE",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 70210,
+      "salHi": 70210,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729264460?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=03278C3F2BC071192D46838C4C3C530D2779DACE"
+    },
+    {
+      "id": "adz-5722373209",
+      "title": "Electrician",
+      "company": "West Fraser",
+      "companyId": "west-fraser",
+      "city": "Genevia",
+      "st": "AR",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 67583,
+      "salHi": 67583,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 35,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "$1500 Employee Referral Program ELECTRICIAN This role offers a challenging, diverse and exciting opportunity to become part of our Maintenance team. In general, all Electrician roles are required to repair, install, replace, program, and test all electrical circuits, and equipment. Periodically perform or assist others in routine to moderately complex repairs or installation of automatic electrical and electronic controls. What you will do: Perform routine electrical/electronic preventative mai…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5722373209?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=170AC40C71B7E02806AE33B0C53537607E3F54D1"
+    },
+    {
+      "id": "adz-5735215904",
+      "title": "Electrician",
+      "company": "Faith Technologies",
+      "companyId": "faith-technologies",
+      "city": "Clarksville",
+      "st": "TN",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 109342,
+      "salHi": 109342,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "You’ve discovered something special. A company that cares. Cares about leading the way in construction, engineering, manufacturing and renewable energy. Cares about redefining how energy is designed, applied and consumed. Cares about thoughtfully growing to meet market demands. And ─ as “one of the Healthiest 100 Workplaces in America” ─ is focused on the mind/body/soul of team members through our Culture of Care . The Licensed Electrician I is responsible for electrical installations, troubles…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735215904?se=uF5o7LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=593304C2C3CA431CA96505961EF0B1CF6D189632"
     },
     {
       "id": "adz-5665330870",
@@ -364,267 +598,33 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330870?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=670912F8FB5515E44334200BC62BEDC92FE3B482"
+      "applyUrl": "https://www.adzuna.com/land/ad/5665330870?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=670912F8FB5515E44334200BC62BEDC92FE3B482"
     },
     {
-      "id": "adz-5665330785",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Camillus",
-      "st": "NY",
+      "id": "adz-5729265314",
+      "title": "Experienced Electrician",
+      "company": "Cargill",
+      "companyId": "cargill",
+      "city": "Bruno",
+      "st": "NE",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 78624,
-      "salHi": 78624,
+      "salLo": 49253,
+      "salHi": 49253,
       "salUnit": "yr",
       "hourly": null,
-      "posted": 89,
+      "posted": 28,
       "featured": false,
       "tags": [
         "Full-time"
       ],
       "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Camillus, NY - Industrial Electrician The Opportunity: We are searching for a skilled Ind…",
+        "intro": "New, easy-to-apply options are available for this role: chat with our recruiting assistant Ana at careers.cargill.com or text CargillJobs to 60196. Want to build a stronger, more sustainable future and cultivate your career? Join Cargill's global team of 160,000 employees who are committed to safe, responsible and sustainable ways to nourish the world. This position is in Cargill’s protein and salt business, where we provide wholesome, high-quality food products to a wide range of customers, fr…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330785?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=40810DDD2C707B611E21B686FC52EEA25DD4B48C"
-    },
-    {
-      "id": "adz-5665249576",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Colvin",
-      "st": "NY",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 99641,
-      "salHi": 99641,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 89,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Camillus, NY - Industrial Electrician The Opportunity: We are searching for a skilled Ind…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665249576?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=C4AC02F7DC0785FB47BD87BD6E24F26254DA44BC"
-    },
-    {
-      "id": "adz-5665330696",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Cardiff",
-      "st": "NY",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 88083,
-      "salHi": 88083,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 89,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Camillus, NY - Industrial Electrician The Opportunity: We are searching for a skilled Ind…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5665330696?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=84FD4E00226CDA2004C160BD4F9C70F9EEDF7FDB"
-    },
-    {
-      "id": "adz-5686558014",
-      "title": "Industrial Electrician",
-      "company": "Corteva Agriscience",
-      "companyId": "corteva-agriscience",
-      "city": "Woodhull",
-      "st": "IL",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 53768,
-      "salHi": 53768,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 71,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Sign-On Bonus of $3,500 (Not applicable for Internal Employees) Who We Are and What We Do: At Corteva Agriscience , you will help us grow what is next! No matter your role, you will be part of a team that is building the future of agriculture – leading breakthroughs in the innovation and application of science and technology that will better the lives of people all over the world and fuel the progress of humankind. Corteva Agriscience has an exciting opportunity for an Electrician to join our t…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5686558014?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=F410434E42D4D21E75E9D0518D688119336BECB2"
-    },
-    {
-      "id": "adz-5656227825",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Lowell",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 125291,
-      "salHi": 125291,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 97,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5656227825?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=9A4404B5BAC9D3EF2A01E7B465F459ED29678D31"
-    },
-    {
-      "id": "adz-5656227818",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Leominster",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 110641,
-      "salHi": 110641,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 97,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5656227818?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=E2217D9343F030AC945EB411C3DA21F11114CB5A"
-    },
-    {
-      "id": "adz-5656228112",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Pepperell",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 109245,
-      "salHi": 109245,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 97,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5656228112?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=C1E24ACABFC914C59645A03B4BAD7BEC72C11691"
-    },
-    {
-      "id": "adz-5649934886",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "Devens",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 112643,
-      "salHi": 112643,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 102,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5649934886?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=D25C904021800B2D45E0AF08E93787CF5753E5ED"
-    },
-    {
-      "id": "adz-5656227873",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "West Acton",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 124519,
-      "salHi": 124519,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 97,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5656227873?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=A6E99A1D12A29C16CA671CDC99365588FCA0611C"
-    },
-    {
-      "id": "adz-5656227624",
-      "title": "Industrial Electrician",
-      "company": "WestRock",
-      "companyId": "westrock",
-      "city": "West Boylston",
-      "st": "MA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 108142,
-      "salHi": 108142,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 97,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Smurfit Westrock (NYSE:SW) is the go-to leader and partner of choice in sustainable packaging. We are dedicated to creating efficient and scalable paper and packaging solutions to help solve complex packaging challenges. Guided by our values of safety, loyalty, integrity and respect, we are committed to delivering meaningful value for shareholders, customers, employees and the communities where we operate. Industrial Electrician The Opportunity: As an industrial controls technician for our corr…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5656227624?se=gNZ7SK9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=F449E91F5B6CB51A95A36188407160E1022BBE91"
+      "applyUrl": "https://www.adzuna.com/land/ad/5729265314?se=TKG667Nl8RGIj9NXvfiUtQ&utm_medium=api&utm_source=50dc73db&v=405E30C00898762BDDE57F6F8EAEE3002DE898BF"
     }
   ]
 }

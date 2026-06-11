@@ -3,121 +3,17 @@
   "count": 24,
   "jobs": [
     {
-      "id": "adz-5719196213",
-      "title": "Registered Nurse (RN) - Full-time, Benefits Start Day One",
-      "company": "Encompass Health Rehabilitation Hospital of Midland Odessa",
-      "companyId": "encompass-health-rehabilitation-hospital-of-midland-odessa",
-      "city": "Goldsmith",
-      "st": "TX",
+      "id": "adz-5748801533",
+      "title": "Otolaryngologist Physician",
+      "company": "AMN Healthcare",
+      "companyId": "amn-healthcare",
+      "city": "Lafayette",
+      "st": "IN",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 37220,
-      "salHi": 37220,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 38,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Registered Nurse Career Opportunity Hiring for all positions full-time, part-time and PRN days and nights available. Hourly rate range $36 - $58 / hour Encompass Health: Where Nursing Meets Heart, Home, and Healing Are you seeking a nursing career deeply rooted in purpose, close to your heart and home? Encompass Health offers a transformative journey where your expertise as a Registered Nurse becomes an integral part of patients' recoveries. Picture the impact of providing individualized, compa…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5719196213?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=B9AC83FBD5A800C6013B5EF5866D6D617D478665"
-    },
-    {
-      "id": "adz-5752239137",
-      "title": "CDL A Delivery Truck Driver",
-      "company": "Mclane Company, Inc.",
-      "companyId": "mclane-company-inc",
-      "city": "Sumterville",
-      "st": "FL",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 69539,
-      "salHi": 69539,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 7,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Take your CDL-A career further! Our drivers work hard to move, supply, and provide for America's favorite brands. Being reliable and dedicated to safety has defined our success as an industry leader for 130 years. Join McLane and discover the driving difference-we provide you with industry-leading pay, strong and secure client relationships, and get you home safely and more often. That's why our drivers build long-lasting careers with us. Benefits you can count on: Pay Rate: Drivers make up to …",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5752239137?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=6EAD79628D4EC3B474CD1CE648701BF2998090EA"
-    },
-    {
-      "id": "adz-5428707976",
-      "title": "Houseparents - Relocation to Hershey, PA Required",
-      "company": "Milton Hershey School",
-      "companyId": "milton-hershey-school",
-      "city": "Corona",
-      "st": "CA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 90619,
-      "salHi": 90619,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 252,
-      "featured": true,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Description: Located in Hershey, PA, Milton Hershey School (MHS) is a top-notch home and school where over 2,200 pre-K through 12th grade students from disadvantaged backgrounds are provided an extraordinary, cost-free, career-focused education. This is made possible by the generosity of Milton and Catherine Hershey, who established the school in 1909 and ensured it was fully endowed. Thanks to their foresight and generosity, the school has over 12,000 graduates and continues to expand to serve…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5428707976?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=B24AB2C41228B07144858F5DCE5979EADB801823"
-    },
-    {
-      "id": "adz-5750679855",
-      "title": "Full Time Mobile Veterinarian",
-      "company": "Lap of Love",
-      "companyId": "lap-of-love",
-      "city": "King George",
-      "st": "VA",
-      "remote": false,
-      "type": "Part-time",
-      "level": "",
-      "salLo": 103640,
-      "salHi": 103640,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 8,
-      "featured": true,
-      "tags": [
-        "Part-time"
-      ],
-      "desc": {
-        "intro": "Live Your Best Life at Lap of Love Veterinary Hospice! Join Lap of Love as an In-Home, Associate Veterinarian in Fredericksburg, VA and surrounding areas. Imagine a veterinary role that honors your time, supports your well-being, and reconnects you with the heart of why you became a veterinarian. At Lap of Love, we’ve created a career path where you can practice with purpose, while living a life that feels balanced and supported. Veterinarian-founded and owned, Lap of Love offers an alternative…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5750679855?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=170DFD810163D135A737C77D462E21677053A3F8"
-    },
-    {
-      "id": "adz-5747435201",
-      "title": "CDL A Delivery Truck Driver",
-      "company": "Mclane Company, Inc.",
-      "companyId": "mclane-company-inc",
-      "city": "Newtonia",
-      "st": "MO",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 70803,
-      "salHi": 70803,
+      "salLo": 75060,
+      "salHi": 75060,
       "salUnit": "yr",
       "hourly": null,
       "posted": 10,
@@ -126,24 +22,24 @@
         "Full-time"
       ],
       "desc": {
-        "intro": "Take your CDL-A career further! Our drivers work hard to move, supply, and provide for America's favorite brands. Being reliable and dedicated to safety has defined our success as an industry leader for 130 years. Join McLane and discover the driving difference-we provide you with industry-leading pay, strong and secure client relationships, and get you home safely and more often. That's why our drivers build long-lasting careers with us. Benefits you can count on: Pay Rate: Drivers average $80…",
+        "intro": "Job Description & Requirements Otolaryngologist Physician StartDate: ASAP Pay Rate: $525000.00 - $525000.00 A reputable four-physician practice committed to quality, compassionate care is seeking a qualified otolaryngologist to join its team. This position offers the ability to take over an established practice and earn competitive compensation while living and working in an inviting Big Ten community. Opportunity Highlights $525,000 salary $100,000 sign-on bonus Excellent work-life balance wit…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5747435201?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=702E8E961B148C0B9B6D0A69A0146BBC08DDC6BE"
+      "applyUrl": "https://www.adzuna.com/land/ad/5748801533?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=326A3DB51969B780962926CE8EAE7A5A250FE58C"
     },
     {
-      "id": "adz-5755415540",
-      "title": "Family Medicine Physician",
-      "company": "Trinity Health",
-      "companyId": "trinity-health",
-      "city": "Elkins Park",
-      "st": "PA",
+      "id": "adz-5755416538",
+      "title": "Physician-Surgery: Oncology",
+      "company": "Banner Health",
+      "companyId": "banner-health",
+      "city": "South Tucson",
+      "st": "AZ",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 181599,
-      "salHi": 181599,
+      "salLo": 182437,
+      "salHi": 182437,
       "salUnit": "yr",
       "hourly": null,
       "posted": 4,
@@ -152,418 +48,106 @@
         "Full-time"
       ],
       "desc": {
-        "intro": "Nazareth Family Medicine, part of Trinity Health Mid-Atlantic, is seeking a Board-Certified/Board-Eligible Family Medicine Physician to support continued primary care expansion and access initiatives across the Philadelphia market. This opportunity offers a 100% outpatient setting, strong clinical support, and the ability to build a patient panel within a mission-driven, community-focused health system. Practice Highlights Established, high-demand primary care practice Immediate patient volume …",
+        "intro": "BUM Logo 1 (002).png The Department of Surgery at Banner University Medicine Tucson is actively seeking a Board-Certified/Board-Eligible Breast Surgeon at the Assistant or Associate Professor level to join our NAPBC accredited multidisciplinary breast team at the University of Arizona Cancer Center. Our top-tier academic breast program delivers comprehensive, multidisciplinary care to the diverse communities of Tucson and Southern Arizona. At the heart of our approach is a collaborative team of…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5755415540?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=227EDB9288F314F85C9305C2D61B7E5A0989FCDC"
+      "applyUrl": "https://www.adzuna.com/land/ad/5755416538?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=313832D7D1A434BBBEF36B3946C0F7BAB0EE9B21"
     },
     {
-      "id": "adz-5754911888",
-      "title": "A North Dakota Facility Seeks a Locums Otolaryngologist",
-      "company": "Weatherby Healthcare",
-      "companyId": "weatherby-healthcare",
-      "city": "Bismarck",
-      "st": "ND",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 119259,
-      "salHi": 119259,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 5,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Enjoy the locum tenens lifestyle knowing Weatherby is here to support you every step of the way. Call and speak to one of our consultants today for available dates and details. 7 am - 7 am clinic and call coverage 24 hour call coverage with daytime clinic Must have worked in last 12 months with case logs Board certification required Paid malpractice insurance; pre-paid travel and housing expenses Assignment details and time entry in online portal Competitive compensation 24-hour access to your …",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5754911888?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=40EF8809D73C17C8C29386E94235B9953AA0BD0D"
-    },
-    {
-      "id": "adz-5756673053",
-      "title": "CDL A Delivery Truck Driver",
-      "company": "Mclane Company, Inc.",
-      "companyId": "mclane-company-inc",
-      "city": "Huntersville",
-      "st": "NC",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 87941,
-      "salHi": 87941,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 3,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Take your CDL-A career further! Our drivers work hard to move, supply, and provide for America's favorite brands. Being reliable and dedicated to safety has defined our success as an industry leader for 130 years. Join McLane and discover the driving difference-we provide you with industry-leading pay, strong and secure client relationships, and get you home safely and more often. That's why our drivers build long-lasting careers with us. Benefits you can count on: Pay Rate: Drivers make $80,00…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5756673053?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=5DD02CC2EF837753EE5F6C39515AB19499D5F1F8"
-    },
-    {
-      "id": "adz-5699024963",
-      "title": "CDL Local Driver",
-      "company": "US Foods, Inc.",
-      "companyId": "us-foods-inc",
-      "city": "Portage Des Sioux",
+      "id": "adz-5757807540",
+      "title": "NURSE, CLINICAL",
+      "company": "BJC HealthCare",
+      "companyId": "bjc-healthcare",
+      "city": "Moline Acres",
       "st": "MO",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 78141,
-      "salHi": 78141,
+      "salLo": 42283,
+      "salHi": 42283,
       "salUnit": "yr",
       "hourly": null,
-      "posted": 58,
-      "featured": false,
+      "posted": 2,
+      "featured": true,
       "tags": [
         "Full-time"
       ],
       "desc": {
-        "intro": "BECOME A US FOODS® DRIVER! Ready to build a career with a company that’s leading the foodservice industry? We help YOU make it! Our Delivery Drivers start at $29 /hour with weekly pay ! Top performers are making over $100k! The current schedule is a 5-day work week during Monday - Saturday with a 3am-5am start time, averaging 45 hours a week. Home daily! Benefits medical, dental, vision, 401K, life insurance, strong safety culture, and much more! Excellent local leadership. US Foods is one of t…",
+        "intro": "Additional Information About the Role Additional Preferred Requirements Overview Christian Hospital has been serving St. Louis and the surrounding metro areas since 1903. U.S. News & World Report ranks Christian Hospital No. 5 in St. Louis for overall clinical excellence and No. 9 in Missouri, which puts us in the top 6% of all hospitals in the state! The U.S. News adult methodology ranks clinical specialties and rates common care procedures and conditions. Christian was nationally ranked as “h…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5699024963?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=1AA02C1F5D43B5A55DE422FA652E257A91D9872D"
+      "applyUrl": "https://www.adzuna.com/land/ad/5757807540?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=F9578CD3099D3E63E44B6929F376B84EA50FD29C"
     },
     {
-      "id": "adz-5749254995",
-      "title": "Physical Therapist Home Health SIGN ON BONUS and RELOCATION BONUS",
-      "company": "PruittHealth",
-      "companyId": "pruitthealth",
-      "city": "Albany",
-      "st": "GA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 168216,
-      "salHi": 168216,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 9,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Physical Therapist PT – Home Health Services - SIGN ON BONUS $15,000 AND RELOCATION $5,000 available Home is where the heart is! That's why PruittHealth @ Home is committed to caring for our patients and residents, as well as providing our employees with a rewarding career as a member of our PruittHealth family. JOB PURPOSE: To provide evaluative, consultative and treatment interventions to all home health patients in their place of residence referred by a licensed physician and will maintain e…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5749254995?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=D3223C31E750BCD1E87BE702E5947FF8862E9106"
-    },
-    {
-      "id": "adz-5738825990",
-      "title": "Licensed Mental Health Therapist (LMFT, LCSW, LPCC) - Tracy, CA",
-      "company": "LifeStance Health",
-      "companyId": "lifestance-health",
-      "city": "Mountain House",
-      "st": "CA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 97613,
-      "salHi": 97613,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 19,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "At LifeStance Health, we believe in a truly healthy society where mental and physical healthcare are unified to make lives better. Our mission is to help people lead healthier, more fulfilling lives by improving access to trusted, affordable, and personalized mental healthcare. Everywhere. Every day. It’s a lofty goal; we know. But we make it happen with the best team in behavioral health. Thank you for taking the time to explore a career with us. As the fastest growing behavioral health practi…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5738825990?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=939D986DC87EBAD56E27BDDE7019551290973E3E"
-    },
-    {
-      "id": "adz-5723715755",
-      "title": "Dentist (Part-Time)",
-      "company": "Topaz Dentistry & Braces - a Benevis company",
-      "companyId": "topaz-dentistry-braces-a-benevis-company",
-      "city": "Moody",
-      "st": "TX",
+      "id": "adz-5757350156",
+      "title": "Part Time Associate Veterinarian",
+      "company": "Lap of Love",
+      "companyId": "lap-of-love",
+      "city": "Crystal River",
+      "st": "FL",
       "remote": false,
       "type": "Part-time",
       "level": "",
-      "salLo": 98431,
-      "salHi": 98431,
+      "salLo": 73391,
+      "salHi": 73391,
       "salUnit": "yr",
       "hourly": null,
-      "posted": 34,
-      "featured": false,
+      "posted": 2,
+      "featured": true,
       "tags": [
         "Part-time"
       ],
       "desc": {
-        "intro": "Overview: Work for a company that is truly making the world a happier place, one smile at a time! At Benevis, we create over a million smiles a year in the communities we serve and believe that every person deserves access to quality, affordable dental care. This mission drives everything we do! With over 3000 employees in offices across the country from clinical to support staff - we are united in our mission to create happy, healthy smiles through providing high quality dental care to underse…",
+        "intro": "Live Your Best Life at Lap of Love Veterinary Hospice! Join Lap of Love as an In-Home, Associate Veterinarian in Hernando, FL and surrounding areas. Imagine a veterinary role that honors your time, supports your well-being, and reconnects you with the heart of why you became a veterinarian. At Lap of Love, we’ve created a career path where you can practice with purpose, while living a life that feels balanced and supported. Veterinarian-founded and owned, Lap of Love offers an alternative to in…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5723715755?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=775E02838D99CFBDF11A017BAC20C7B85D4961CD"
+      "applyUrl": "https://www.adzuna.com/land/ad/5757350156?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=1A6E1EAE8CFA6E0C7E4B42D29B0FFFF8E0975097"
     },
     {
-      "id": "adz-5428700095",
-      "title": "Youth Development Specialist - Relocation to Hershey, PA Required",
-      "company": "Milton Hershey School",
-      "companyId": "milton-hershey-school",
-      "city": "Bulverde",
+      "id": "adz-5758363560",
+      "title": "Registered Nurse Endoscopy PRN",
+      "company": "HCA Houston Healthcare Medical Center",
+      "companyId": "hca-houston-healthcare-medical-center",
+      "city": "Greater Third Ward",
       "st": "TX",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 64561,
-      "salHi": 64561,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 252,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Description: Located in Hershey, PA, Milton Hershey School (MHS) is a top-notch home and school where over 2,200 pre-K through 12th grade students from disadvantaged backgrounds are provided an extraordinary, cost-free, career-focused education. This is made possible by the generosity of Milton and Catherine Hershey, who established the school in 1909 and ensured it was fully endowed. Thanks to their foresight and generosity, the school has over 12,000 graduates and continues to expand to serve…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5428700095?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=B555860041C7840FA2E099A9BC57992D0C68B8B2"
-    },
-    {
-      "id": "adz-5720009855",
-      "title": "Respiratory Therapist PRN",
-      "company": "TriStar Centennial Medical Center",
-      "companyId": "tristar-centennial-medical-center",
-      "city": "Nashville",
-      "st": "TN",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 103793,
-      "salHi": 103793,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 37,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Do you have the PRN career opportunities as a(an) Respiratory Therapist CRT PRN you want with your current employer? We have an exciting opportunity for you to join TriStar Centennial Medical Center which is part of the nation's leading provider of healthcare services, HCA Healthcare. Job Summary and Qualifications As a Respiratory Therapist, you’ll play an essential role in guiding patients through both routine care and critical moments. You’ll perform diagnostic and therapeutic procedures whi…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5720009855?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=68DED42AFE67BB241321B734238566E9564CF66F"
-    },
-    {
-      "id": "adz-5723211770",
-      "title": "Emergency Response Paramedic",
-      "company": "AMR",
-      "companyId": "amr",
-      "city": "Shady Cove",
-      "st": "OR",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 40753,
-      "salHi": 40753,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 34,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Job Description: *Relocation Assistance potentially available for FULL TIME Paramedics. Inquire within* Come join our team of dedicated and caring professionals in the beautiful Rogue River Valley of Southern Oregon! We are currently hiring Paramedics that are passionate about delivering high-quality patient care in our progressive EMS 911 system. With over 17,000 calls for service annually you will get to provide ALS care and transport in fast-paced system while working and living in an outdoo…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5723211770?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=98B7906AC36EEBBA50B4F727BD1D026F625D5AE5"
-    },
-    {
-      "id": "adz-5737737296",
-      "title": "Licensed Mental Health Counselor",
-      "company": "Headway",
-      "companyId": "headway",
-      "city": "East Case",
-      "st": "MD",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 83329,
-      "salHi": 83329,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 20,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "\" Licensed Mental Health Counselor (LMHC) Wage: Up to $121.74/hour Licensed Mental Health Counselor — Are you ready to launch or expand your private practice? Headway is here to help you start accepting insurance with ease, increase your earnings with higher rates, and start taking covered clients sooner. It’s all on one free-to-use platform, no commitment required. About you ● You’re a fully-licensed Mental Health Counselor at a Master’s level or above with LMHC, LPCMH, or LIMHP licensure (acc…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5737737296?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=0B924A3606540F6236CBDA054E6DD9C7B00B2FE4"
-    },
-    {
-      "id": "adz-5428700565",
-      "title": "Houseparents - Relocation to Hershey, PA Required",
-      "company": "Milton Hershey School",
-      "companyId": "milton-hershey-school",
-      "city": "Dorchester",
-      "st": "TX",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 66880,
-      "salHi": 66880,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 252,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Description: Located in Hershey, PA, Milton Hershey School (MHS) is a top-notch home and school where over 2,200 pre-K through 12th grade students from disadvantaged backgrounds are provided an extraordinary, cost-free, career-focused education. This is made possible by the generosity of Milton and Catherine Hershey, who established the school in 1909 and ensured it was fully endowed. Thanks to their foresight and generosity, the school has over 12,000 graduates and continues to expand to serve…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5428700565?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=859203EB7E088C03F8E62B4317B42039BA307B31"
-    },
-    {
-      "id": "adz-5726576045",
-      "title": "Traveling Retail Merchandiser",
-      "company": "SAS Retail Services",
-      "companyId": "sas-retail-services",
-      "city": "Perkinsville",
-      "st": "VT",
-      "remote": false,
-      "type": "Part-time",
-      "level": "",
-      "salLo": 38637,
-      "salHi": 38637,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 31,
-      "featured": false,
-      "tags": [
-        "Part-time"
-      ],
-      "desc": {
-        "intro": "We want you to help us shape the future of shopping experiences and deliver on our purpose of connecting people with the products and experiences that enrich their lives. Joining SAS Retail Services, an Advantage Solutions company, means joining a network of 65,000 teammates serving 4,000 brands and retail customers across 40 countries. All the while, being provided the opportunities, support, and enrichment you need to grow your career. In this role, you will provide in-store merchandising sup…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5726576045?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=FB54CDBF40207ACC6DDB119C4736C8A3035E4363"
-    },
-    {
-      "id": "adz-5734596584",
-      "title": "Nurse Assistant (CNA, PCT) - Special Care Telemetry",
-      "company": "Manchester Memorial Hospital",
-      "companyId": "manchester-memorial-hospital",
-      "city": "Avon",
-      "st": "CT",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 25215,
-      "salHi": 25215,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 23,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Location Detail: MMH-71 Haynes Street (10627) Shift Detail: every other weekend, every other holiday Work where every moment matters. Every day, over 40,000 Hartford HealthCare colleagues come to work with one thing in common: Pride in what we do, knowing every moment matters here. We invite you to become part of Connecticut’s most comprehensive healthcare network. The Greater Manchester Region has approximately 2,500 employees. It includes Manchester Memorial Hospital, a 249-bed community hosp…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5734596584?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=6A261F582C8E9D2E59EBB4FA8BA0A733DF724DD2"
-    },
-    {
-      "id": "adz-5428710116",
-      "title": "Houseparents, Full-Time - Relocation to Hershey, PA Required",
-      "company": "Milton Hershey School",
-      "companyId": "milton-hershey-school",
-      "city": "Stockton",
-      "st": "UT",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 69498,
-      "salHi": 69498,
-      "salUnit": "yr",
-      "hourly": null,
-      "posted": 252,
-      "featured": false,
-      "tags": [
-        "Full-time"
-      ],
-      "desc": {
-        "intro": "Description: Located in Hershey, PA, Milton Hershey School (MHS) is a top-notch home and school where over 2,200 pre-K through 12th grade students from disadvantaged backgrounds are provided an extraordinary, cost-free, career-focused education. This is made possible by the generosity of Milton and Catherine Hershey, who established the school in 1909 and ensured it was fully endowed. Thanks to their foresight and generosity, the school has over 12,000 graduates and continues to expand to serve…",
-        "resp": [],
-        "reqs": []
-      },
-      "applyUrl": "https://www.adzuna.com/land/ad/5428710116?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=6DF5BCF1C777A2067E3DEDAA35B5B8C59F907F13"
-    },
-    {
-      "id": "adz-5758358955",
-      "title": "New Grad RN",
-      "company": "Memorial Health University Medical Center",
-      "companyId": "memorial-health-university-medical-center",
-      "city": "Thunderbolt",
-      "st": "GA",
-      "remote": false,
-      "type": "Full-time",
-      "level": "",
-      "salLo": 57352,
-      "salHi": 57352,
+      "salLo": 60637,
+      "salHi": 60637,
       "salUnit": "yr",
       "hourly": null,
       "posted": 1,
-      "featured": false,
+      "featured": true,
       "tags": [
         "Full-time"
       ],
       "desc": {
-        "intro": "Are you passionate about the patient experience? At HCA Healthcare, we are committed to caring for patients with purpose and integrity. We care like family! Jump-start your career as a Resident I - Transitional Year today with Memorial University Medical Center. Under the supervision of attending physicians, responsibilities include patient care activities within the scope of their clinical privileges commensurate with the level of training, attendance at clinical rounds and seminars, timely co…",
+        "intro": "Do you have the PRN career opportunities as a Registered Nurse PRN you want with your current employer? We have an exciting opportunity for you to join HCA Houston Healthcare Medical Center which is part of the nation's leading provider of healthcare services, HCA Healthcare. Job Summary and Qualifications We are seeking a Registered Nurse (RN) Endoscopy for our facility to ensure that we continue to provide all patients with high quality, efficient care. We are an amazing team that works hard …",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5758358955?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=4A22297949E63795A3D74C78C9B4EDAA5DB0955B"
+      "applyUrl": "https://www.adzuna.com/land/ad/5758363560?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=C1C95DB13A532939B0528A34BF1C32B5E81DF663"
     },
     {
-      "id": "adz-5428707386",
-      "title": "Houseparents - Relocation to Hershey, PA Required",
+      "id": "adz-5428700513",
+      "title": "Youth Development Specialist - Relocation to Hershey, PA Required",
       "company": "Milton Hershey School",
       "companyId": "milton-hershey-school",
-      "city": "Highland Beach",
-      "st": "FL",
+      "city": "Pleasanton",
+      "st": "TX",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 70847,
-      "salHi": 70847,
+      "salLo": 55747,
+      "salHi": 55747,
       "salUnit": "yr",
       "hourly": null,
       "posted": 252,
-      "featured": false,
+      "featured": true,
       "tags": [
         "Full-time"
       ],
@@ -572,20 +156,177 @@
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5428707386?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=8F920D952C07E7AC9E3FCA93D075C8EA3E2B9A46"
+      "applyUrl": "https://www.adzuna.com/land/ad/5428700513?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=04A6C32F5944A9BA689A9A0BE32E87C11637D33C"
     },
     {
-      "id": "adz-5748800884",
-      "title": "Director of Anesthesiology Opportunity in New England",
-      "company": "AMN Healthcare",
-      "companyId": "amn-healthcare",
-      "city": "Halyoke",
-      "st": "MA",
+      "id": "adz-5758050754",
+      "title": "Registered Nurse Med Surg Neuro",
+      "company": "Ascension",
+      "companyId": "ascension",
+      "city": "Shorewood",
+      "st": "WI",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 61966,
-      "salHi": 61966,
+      "salLo": 96793,
+      "salHi": 96793,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 2,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Your future role at a glance Location: Milwaukee, WI Facility: Columbia St. Mary's Hospital Milwaukee Campus Department/Specialty: Med Surg Neuro Schedule: Full-time / Nights Life at Ascension: Where purpose meets opportunity Ascension is a leading nonprofit Catholic health system with a culture and associate experience grounded in service, growth, care and connection. We empower our 97,000 associates to bring their skills and expertise every day to reimagining healthcare, together. Recognized …",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5758050754?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=841F8A8929BD33C30598834651FF6CA2C626BAD1"
+    },
+    {
+      "id": "adz-5696723133",
+      "title": "Manager of Emergency Services RN",
+      "company": "Del Sol Medical Center",
+      "companyId": "del-sol-medical-center",
+      "city": "Sunland Park",
+      "st": "NM",
+      "remote": false,
+      "type": "Part-time",
+      "level": "",
+      "salLo": 50167,
+      "salHi": 50167,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 61,
+      "featured": false,
+      "tags": [
+        "Part-time"
+      ],
+      "desc": {
+        "intro": "Introduction Managers thrive with us! HCA Healthcare is one of the nation’s leading providers of healthcare services, comprising of over 180 hospitals and about 2,000 sites of care in 21 states and the United Kingdom. We are looking for a(an) Manager of Emergency Services RN for our Del Sol Medical Center team where excellence creates excellence. Benefits Del Sol Medical Center, offers a total rewards package that supports the health, life, career and retirement of our colleagues. The available…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5696723133?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=A814D0998ABF422FFC7E488B8DC0E237E7D42544"
+    },
+    {
+      "id": "adz-5755416228",
+      "title": "OB/GYN - Physician - Silvis, IL - Limited Call",
+      "company": "Trinity Health",
+      "companyId": "trinity-health",
+      "city": "Silvis",
+      "st": "IL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 67775,
+      "salHi": 67775,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 4,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Join the MercyOne Genesis Medical Group OB/GYN Team Through patient and family centered care, MercyOne Genesis OB/GYN team provides team-based collaborative care and treatment, close to home. We have an excellent opportunity for a Board Certified or Board Eligible Obstetrics & Gynecology physician to join an established practice located in Silvis, IL. We offer * Full- time employed opportunity - Full spectrum OB/GYN - Busy practice with instant volume * Outpatient clinic on campus, just steps a…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5755416228?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=2C5D8C8EC0DD37E6A90C10E2695833A8B1D66E45"
+    },
+    {
+      "id": "adz-5736519518",
+      "title": "CDL-A Trainee, Component",
+      "company": "Mclane Company, Inc.",
+      "companyId": "mclane-company-inc",
+      "city": "Newark",
+      "st": "OH",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 62027,
+      "salHi": 62027,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 21,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Take your CDL-A career further! Our drivers work hard to move, supply, and provide for America's favorite brands. Being reliable and dedicated to safety has defined our success as an industry leader for 130 years. Join McLane and discover the driving difference-we provide you with industry-leading pay, strong and secure client relationships, and get you home safely and more often. That's why our drivers build long-lasting careers with us. The Driver, Trainee Component position learns the essent…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5736519518?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=24341CC64A3BF6B956BDA4944089377E0DE9B97E"
+    },
+    {
+      "id": "adz-5735739689",
+      "title": "RN ICU Hospital Float Nights",
+      "company": "UCHealth",
+      "companyId": "uchealth",
+      "city": "Lakewood",
+      "st": "CO",
+      "remote": true,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 50594,
+      "salHi": 50594,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 22,
+      "featured": false,
+      "tags": [
+        "Full-time",
+        "Remote"
+      ],
+      "desc": {
+        "intro": "Description Location: UCHealth UCHlth Anschutz Inpt Pavilion, US:CO:Aurora Department: Resource Pool Work Schedule: Full Time, 72.00 hours per pay period (2 weeks) Shift: Nights Pay: $35.29 - $54.71 / hour. Pay is dependent on applicant's relevant experience This position is an onsite role and does not offer a hybrid or remote option Work nights, earn more - our Night Shift Incentive Program pays $1,600 quarterly ($6,400/year) to full-time night shift RNs. Minimum Requirements: Graduate of an a…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5735739689?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=F4207CB62A7E6CE6DE795994AE4A62FF7A48A6F6"
+    },
+    {
+      "id": "adz-5608451572",
+      "title": "Physical Therapist Assistant",
+      "company": "Encompass Health Rehabilitation Hospital of Wichita Falls",
+      "companyId": "encompass-health-rehabilitation-hospital-of-wichita-falls",
+      "city": "Grandfield",
+      "st": "OK",
+      "remote": false,
+      "type": "Part-time",
+      "level": "",
+      "salLo": 55079,
+      "salHi": 55079,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 131,
+      "featured": false,
+      "tags": [
+        "Part-time"
+      ],
+      "desc": {
+        "intro": "Physical Therapist Assistant Career Opportunity Join a Team That Puts Your Passion for Care First Are you on the lookout for a fulfilling career that not only feels like home but also allows you to make a meaningful impact close to your heart? Join us as a Physical Therapist Assistant and contribute to the remarkable progress and inspiring outcomes of our patients. Embrace the opportunity to deliver high- quality, compassionate, and personalized care, celebrating the small successes that lead t…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5608451572?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=EBF4F36D5C80C04AAD7F9010BE6703629BA9D095"
+    },
+    {
+      "id": "adz-5747485805",
+      "title": "Family Practice Physician Illinois - $150K Student Loan Repayment",
+      "company": "Curative",
+      "companyId": "curative",
+      "city": "Macomb",
+      "st": "IL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 472872,
+      "salHi": 472872,
       "salUnit": "yr",
       "hourly": null,
       "posted": 10,
@@ -594,24 +335,259 @@
         "Full-time"
       ],
       "desc": {
-        "intro": "Job Description & Requirements Director of Anesthesiology Opportunity in New England StartDate: ASAP Pay Rate: $650.00 - $700000.00 An esteemed, award-winning organization located in a picturesque New England community is actively seeking a qualified Director of Anesthesiology to join its dynamic team. This is an exceptional opportunity to experience a fulfilling work-life balance in a region known for its natural beauty and vibrant community. The organization prides itself on fostering a colla…",
+        "intro": "Outpatient Family Medicine opening in a well-supported clinic setting with no weekend hours. Enjoy an optional 4-day workweek, collaborative team environment, and a full compensation package including loan repayment and bonuses. Practice Setting: Family Clinic is open Monday to Friday 7:00 am - 5:00 pm There is currently 3 Physicians and 4 NPs employed by MDH seeing patients with additional provider support from partner clinics Option to also oversee convenience clinic 48-bed healthcare facilit…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5748800884?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=02988026F153D933DD6AC68302DC4CDC6C7F716D"
+      "applyUrl": "https://www.adzuna.com/land/ad/5747485805?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=F5FB0DAA45F101E7F91BCAA38289040C336BED25"
     },
     {
-      "id": "adz-5751457319",
-      "title": "Radiology Technologist",
-      "company": "HCA Florida Poinciana Hospital",
-      "companyId": "hca-florida-poinciana-hospital",
-      "city": "Poinciana",
-      "st": "FL",
+      "id": "adz-5751272555",
+      "title": "Locums Radiologist Is Wanted in California",
+      "company": "Weatherby Healthcare",
+      "companyId": "weatherby-healthcare",
+      "city": "Philatelic",
+      "st": "CA",
+      "remote": true,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 213278,
+      "salHi": 213278,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 8,
+      "featured": false,
+      "tags": [
+        "Full-time",
+        "Remote"
+      ],
+      "desc": {
+        "intro": "Get in touch with a Weatherby consultant today to learn more about this and other opportunities available now. 7:30 am - 4:30 pm PST schedule Remote teleradiology position Chest and thoracic diagnostic imaging focus Hospital privileges required Board certification required Paid malpractice insurance; pre-paid travel and housing expenses Assignment details and time entry in online portal Competitive compensation 24-hour access to your Weatherby Healthcare consultant Charter member of NALTO From …",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5751272555?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=179CF10FE0ED1505A6EF249659D2FFA74EDC8777"
+    },
+    {
+      "id": "adz-5718742019",
+      "title": "CDL A Delivery Driver - SYGMA - Ruther Glen, VA",
+      "company": "Sysco",
+      "companyId": "sysco",
+      "city": "Glen Allen",
+      "st": "VA",
       "remote": false,
       "type": "Full-time",
       "level": "",
-      "salLo": 80143,
-      "salHi": 80143,
+      "salLo": 46104,
+      "salHi": 46104,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 38,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Company: US3665 Sygma Virginia (The Sygma Network, Inc) Sales Territory: None Zip Code: 22546 Travel Percentage: 0 COMPENSATION INFORMATION: The pay range provided is not indicative of Sysco’s actual pay range but is merely algorithmic and provided for generalized comparison. Factors that may be used to determine rate of pay include specific skills, work location, work experience and other individualized factors Are you looking for a place to call home? Stability? A C areer? Come join the SYGMA…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5718742019?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=853BD5A95E5420F211A777490931A498B1B8D347"
+    },
+    {
+      "id": "adz-5733631722",
+      "title": "Ultrasound Technologist",
+      "company": "Medical City Alliance",
+      "companyId": "medical-city-alliance",
+      "city": "Haslet",
+      "st": "TX",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 114614,
+      "salHi": 114614,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 24,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Medical City Alliance Ultrasound Tech - Full Time Weekend Nights (Sat-Mon 645p-715a) Experience the HCA Healthcare difference where colleagues are trusted, valued members of our healthcare team. Grow your career with an organization committed to delivering respectful, compassionate care, and where the unique and intrinsic worth of each individual is recognized. Submit your application for the opportunity below:Ultrasound Technologist What qualifications you will need: Education/Skills Technical…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5733631722?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=2B792398A7DC4D10D8DB9F634FFEE1024CB7E559"
+    },
+    {
+      "id": "adz-5757350898",
+      "title": "Dental Hygienist",
+      "company": "Main Street Dental",
+      "companyId": "main-street-dental",
+      "city": "Plymouth",
+      "st": "NH",
+      "remote": false,
+      "type": "Part-time",
+      "level": "",
+      "salLo": 141229,
+      "salHi": 141229,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 2,
+      "featured": false,
+      "tags": [
+        "Part-time"
+      ],
+      "desc": {
+        "intro": "Dental Hygienist Main Street Dental - hiring part-time Schedule: Wednesdays & thursdays 7:15-4:00 Located @ 107 Main street Plymouth, New Hampshire 03264 Why Heartland Dental? Heartland Dental is the nation's largest dental support organization, providing non-clinical administrative support services to more than 3,000 supported doctors across 39 states and the District of Columbia in 1,900 dental offices. Each Heartland Dental supported office is unique to the community and the patients they se…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5757350898?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=4C05F7856F535AA5603B8453A51CE35E7D585A08"
+    },
+    {
+      "id": "adz-5625168522",
+      "title": "Registered Nurse - New Grads Welcome",
+      "company": "Incredible Health",
+      "companyId": "incredible-health",
+      "city": "Davison",
+      "st": "MI",
+      "remote": false,
+      "type": "Part-time",
+      "level": "",
+      "salLo": 65882,
+      "salHi": 65882,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 120,
+      "featured": false,
+      "tags": [
+        "Part-time"
+      ],
+      "desc": {
+        "intro": "Hospitals on Incredible Health are actively hiring and accepting applications in the Grand Blanc, MI area for the following position: Registered Nurse - Recent Grad Float Pool. Nurses with experience in any of the following areas are strongly encouraged to apply: Cardiac patients, Couplet care, EKG monitoring, Educator, Fundal massage, Healing, Neuro patients, Oncology patients, Orthopedic patients, Ostomy care, PCA pumps , Traction & cast care, Tube feeding management, or Wound & drain care. S…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5625168522?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=DD1111F6AD7C103967A94B8B06D35C8C3E0B5F07"
+    },
+    {
+      "id": "adz-5692724318",
+      "title": "Instacart Shopper - Delivery Driver",
+      "company": "Instacart Shoppers",
+      "companyId": "instacart-shoppers",
+      "city": "Cream Ridge",
+      "st": "NJ",
+      "remote": false,
+      "type": "Part-time",
+      "level": "",
+      "salLo": 71819,
+      "salHi": 71819,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 65,
+      "featured": false,
+      "tags": [
+        "Part-time"
+      ],
+      "desc": {
+        "intro": "FULL-SERVICE SHOPPER Start earning quickly with a flexible schedule Shopping with Instacart is more than grocery delivery. Shoppers help make our world go round. They make money, make moves, and make shopping lists come true. They make good time, make life easier, and make people’s day. Shoppers make it all happen—sign up now to help create a world where everyone has access to the food they love. As a full-service shopper, you’ll receive orders through the Shopper app to shop from stores in you…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5692724318?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=2A5A4688A59F9BD95CD7682E75A17772AFB30392"
+    },
+    {
+      "id": "adz-5757808458",
+      "title": "STORE MANAGER - 21 and older only - Pickensville AL",
+      "company": "Dollar General",
+      "companyId": "dollar-general",
+      "city": "Carrollton",
+      "st": "AL",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 33357,
+      "salHi": 33357,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 2,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Work Where You Matter At Dollar General, our mission is Serving Others! We value each and every one of our employees. Whether you are looking to launch a new career in one of our many convenient Store locations, Distribution Centers, Store Support Center or with our Private Fleet Team, we are proud to provide a wide range of career opportunities. We are not just a retail company; we are a company that values the unique strengths and perspectives that each individual brings. Your difference trul…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5757808458?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=89959BDC49496A90A97FBABBDB853CE1ED87725E"
+    },
+    {
+      "id": "adz-5747485781",
+      "title": "LHMC Neurology – Headache Physician",
+      "company": "Beth Israel Lahey Health",
+      "companyId": "beth-israel-lahey-health",
+      "city": "Burlington",
+      "st": "MA",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 352961,
+      "salHi": 352961,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 10,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Are you a Neurologist looking to make a profound impact on patients' quality of life? Lahey Hospital & Medical Center (LHMC), part of the Beth Israel Lahey Health system, is seeking a Headache Neurologist to join our world-class team. As a leader in neuroscience, we offer a collaborative environment where you can practice at the top of your license, utilizing the latest therapeutics and procedural interventions to treat complex headache disorders. Why Lahey Clinic? Renowned Excellence: Work wit…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5747485781?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=0044FFF0E7AA27A01FBBC12E9894A474A7A7BD9E"
+    },
+    {
+      "id": "adz-5729276936",
+      "title": "New Grad Registered Nurse",
+      "company": "Methodist Hospital Specialty and Transplant",
+      "companyId": "methodist-hospital-specialty-and-transplant",
+      "city": "Solms",
+      "st": "TX",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 60815,
+      "salHi": 60815,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 28,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Do you want to join an organization that invests in you? At Methodist Hospital Specialty and Transplant , you come first! Methodist Healthcare is committed to the growth and development of our future nurses! The Methodist Healthcare Residency Program is a year-long program designed to give you hands-on experience to help establish valuable clinical and critical thinking skills. As a Resident I Graduate Nurse you will be surrounded by a supportive community of nurse educators, experienced nurses…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5729276936?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=04F26B6D4D1EAF3806B8AAF214C68271963C3B86"
+    },
+    {
+      "id": "adz-5750713010",
+      "title": "Neuro ICU RN",
+      "company": "HCA Healthcare Trident Hospital",
+      "companyId": "hca-healthcare-trident-hospital",
+      "city": "Cainhoy",
+      "st": "SC",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 35988,
+      "salHi": 35988,
       "salUnit": "yr",
       "hourly": null,
       "posted": 8,
@@ -620,11 +596,37 @@
         "Full-time"
       ],
       "desc": {
-        "intro": "Last year our HCA Healthcare colleagues invested over 156,000 hours volunteering in our communities. As a(an) Radiology Technologist with HCA Florida Poinciana Hospital you can be a part of an organization that is devoted to giving back! Job Summary and Qualifications We are seeking a dynamic Radiology Tech to join our team. Your primary function is performing x-rays on patients. You will also triage patients and provide other patient care services. You will work with a phenomenal team that car…",
+        "intro": "Ready for a role that supports your unique calling in patient care and fits your life? At HCA Healthcare Trident Hospital, you’ll find clear pathways to advance backed by our unmatched nationwide transfer policy that lets you grow your career when the time is right for you. With mentorship opportunities, clinical education courses, professional certification support, and educational assistance, you will have all the resources you need to build the career of a lifetime. Job Summary and Qualifica…",
         "resp": [],
         "reqs": []
       },
-      "applyUrl": "https://www.adzuna.com/land/ad/5751457319?se=_tO4Sa9l8RGjSsRI6M_trQ&utm_medium=api&utm_source=50dc73db&v=A15549B12326FAAEA795DD988C6FB2C69E18EEAF"
+      "applyUrl": "https://www.adzuna.com/land/ad/5750713010?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=071495D65781AA5991F6958358C3C2ED14C885FB"
+    },
+    {
+      "id": "adz-5733633298",
+      "title": "CT Technologist Reg PRN",
+      "company": "HCA Houston ER 24/7",
+      "companyId": "hca-houston-er-24-7",
+      "city": "Champion Forest",
+      "st": "TX",
+      "remote": false,
+      "type": "Full-time",
+      "level": "",
+      "salLo": 121817,
+      "salHi": 121817,
+      "salUnit": "yr",
+      "hourly": null,
+      "posted": 24,
+      "featured": false,
+      "tags": [
+        "Full-time"
+      ],
+      "desc": {
+        "intro": "Introduction Do you have the PRN career opportunities as a(an) CT Technologist Reg PRN you want with your current employer? We have an exciting opportunity for you to join HCA Houston ER 24/7 which is part of the nation's leading provider of healthcare services, HCA Healthcare. Benefits HCA Houston ER 24/7, offers a total rewards package that supports the health, life, career and retirement of our colleagues. The available plans and programs include: Comprehensive medical coverage that covers m…",
+        "resp": [],
+        "reqs": []
+      },
+      "applyUrl": "https://www.adzuna.com/land/ad/5733633298?se=vtLz8LNl8RGiltskv6M-bw&utm_medium=api&utm_source=50dc73db&v=7EFD0138B61A8A135F4529C688D60B64F47B7CD4"
     }
   ]
 }
