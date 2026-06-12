@@ -138,15 +138,13 @@ function App(){
 
   useEffect(()=>{ document.title = route.site && SITES[route.site] ? SITES[route.site].name : 'Job Board — Template Prototype'; },[route.site, route.page]);
 
-  // Load jobs for the current site: LIVE Adzuna (browser-direct) → static snapshot → mock (fallback chain).
+  // Load jobs for the current site: LIVE Adzuna ONLY (no JSON snapshot; mock stays as the instant placeholder until live resolves).
   useEffect(()=>{
     if(!route.site || !SITES[route.site]) return;
     let cancelled = false;
-    const apply = (jobs)=>{ if(!cancelled && jobs && jobs.length){ window.applyLiveJobs(route.site, jobs); setLiveVer(v=>v+1); } return jobs && jobs.length; };
-    const snapshot = ()=> fetch('./jobs-' + route.site + '.json').then(r=> r.ok ? r.json() : null).then(d=> apply((d && d.jobs) || d)).catch(()=>{});
     window.fetchLiveJobs(route.site)
-      .then(jobs=>{ if(!apply(jobs)) return snapshot(); })   // live empty → snapshot
-      .catch(()=> snapshot());                                // live error → snapshot
+      .then(jobs=>{ if(!cancelled && jobs && jobs.length){ window.applyLiveJobs(route.site, jobs); setLiveVer(v=>v+1); } })
+      .catch(()=>{}); // on failure the mock placeholder remains
     return ()=>{ cancelled = true; };
   },[route.site]);
 
