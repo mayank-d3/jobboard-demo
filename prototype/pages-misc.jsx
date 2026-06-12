@@ -73,7 +73,19 @@ function PostJob({ site }){
               </div>
             </div>
           ) : (
-            <form onSubmit={e=>{e.preventDefault(); setSent(true); window.scrollTo(0,0);}}>
+            <form onSubmit={e=>{
+              e.preventDefault();
+              const parts=(f.city||'').split(',');
+              const job={ id:site.key+'-own-'+Date.now(), owned:true, title:f.title||'Untitled role',
+                company:f.company||'Your company', companyId: slug(f.company||'your-company'),
+                city:(parts[0]||'').trim(), st:(parts[1]||'').trim(), remote:/remote/i.test(f.city||''),
+                type:f.type, level:'', salLo:f.salLo?parseInt(f.salLo,10):null, salHi:f.salHi?parseInt(f.salHi,10):null,
+                salUnit:'yr', hourly:null, posted:0, featured:true, tags:[f.type,'Direct'],
+                desc:{ intro:f.desc||`${f.company||'This employer'} is hiring a ${f.title||'new team member'}. Apply directly on this board.`, resp:[], reqs:[] },
+                applyUrl:null, contactEmail:f.email };
+              if(window.addOwnedJob) window.addOwnedJob(site.key, job);
+              setSent(true); window.scrollTo(0,0);
+            }}>
               <SectionHead eyebrow={`${PLANS.find(p=>p.id===plan).name} plan selected`} title="Post a job" sub="Fill in the details below. You can edit anything before it goes live." />
               <div style={{display:'flex',flexDirection:'column',gap:'var(--s4)'}}>
                 <div className="grid-2" style={{gap:'var(--s4)'}}>

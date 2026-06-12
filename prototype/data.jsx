@@ -314,11 +314,39 @@ function buildTags(v, type, remote){
 function hashStr(s){ let h=2166136261; for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; }
 function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
 
+/* ---------- owned / directly-posted jobs (apply ON THIS SITE — no redirect) ----------
+   Employers who post straight to your board (Model 1). No applyUrl, so the Apply button
+   opens the on-page application form (delivered via Web3Forms) instead of bouncing out.
+   One seed per site makes the on-page flow visible; real posts (Post a job) merge in too. */
+function _mkOwned(key, i, o){
+  return {
+    id:key+'-own-'+i, owned:true, title:o.title, company:o.company, companyId:slug(o.company),
+    city:o.city, st:o.st||'', remote:!!o.remote, type:o.type||'Full-time', level:o.level||'',
+    salLo:o.salLo??null, salHi:o.salHi??null, salUnit:'yr', hourly:null,
+    posted:o.posted??0, featured:true,
+    tags:[o.type||'Full-time'].concat(o.remote?['Remote']:[]).concat(['Direct']),
+    desc:{ intro:o.intro||`${o.company} is hiring a ${o.title} and accepts applications directly on this board.`, resp:o.resp||[], reqs:o.reqs||[] },
+    applyUrl:null, contactEmail:o.email||''
+  };
+}
+const OWNED_SEED = {
+  dietitian:[ _mkOwned('dietitian',1,{title:'Clinical Dietitian (Direct Hire)',company:'Riverbend Family Health',city:'Madison',st:'WI',level:'Mid level',salLo:62000,salHi:78000,intro:'Riverbend Family Health is hiring a clinical dietitian for our outpatient clinic. Apply directly here — we review every application in-house, no third party.'}) ],
+  electrician:[ _mkOwned('electrician',1,{title:'Journeyman Electrician (Direct Hire)',company:'Copperline Electric',city:'Austin',st:'TX',level:'Journeyman',salLo:62000,salHi:84000,intro:'Copperline Electric is a local commercial shop hiring journeyman electricians. Apply directly here — you talk to us, not a recruiter.'}) ],
+  teaching:[ _mkOwned('teaching',1,{title:'Elementary Teacher (Direct Hire)',company:'Birch Grove Charter',city:'Denver',st:'CO',level:'Licensed',salLo:48000,salHi:64000,intro:'Birch Grove Charter is hiring a 3rd-grade lead teacher. We accept applications directly on this board.'}) ],
+  company:[ _mkOwned('company',1,{title:'Customer Support Specialist (Direct Hire)',company:'Northstar SaaS',city:'Remote',st:'',remote:true,level:'Entry level',salLo:46000,salHi:58000,intro:'Northstar SaaS hires support specialists directly through this board — no third-party recruiters.'}) ],
+};
+const _OWNED_KEY = 'jb_owned_v1';
+function getOwnedJobs(key){
+  let posted=[];
+  try { const raw=localStorage.getItem(_OWNED_KEY); if(raw){ const all=JSON.parse(raw); posted=all[key]||[]; } } catch(e){}
+  return [...posted, ...(OWNED_SEED[key]||[])];
+}
+
 /* build full SITES object with generated jobs + employer derivations */
 const SITES = {};
 Object.keys(VERTICALS).forEach(k=>{
   const v = VERTICALS[k];
-  const jobs = genJobs(v);
+  const jobs = [...getOwnedJobs(k), ...genJobs(v)];
   const employers = v.companies.map(c=>({
     ...c, id: slug(c.name),
     openRoles: jobs.filter(j=>j.companyId===slug(c.name)).length,
@@ -373,9 +401,11 @@ Object.assign(window, {
 
 // Skeleton until the first live load completes (prevents mock flashing in).
 window.__jobsLoading = true;
-// Overwrite a site's jobs with live results AND rebuild employers (so trust bar / directory show real companies, not mock).
-window.applyLiveJobs = function(key, jobs){
-  if (SITES[key] && jobs && jobs.length){
+// Merge owned/direct-posted jobs (apply on-site) on top of LIVE feed jobs (redirect),
+// then rebuild employers/cities/specialties from the combined set.
+window.applyLiveJobs = function(key, liveJobs){
+  if (SITES[key] && liveJobs && liveJobs.length){
+    const jobs = [...getOwnedJobs(key), ...liveJobs];
     SITES[key].jobs = jobs;
     const byCo = {};
     jobs.forEach(j=>{
@@ -399,6 +429,15 @@ window.applyLiveJobs = function(key, jobs){
   }
 };
 
+// Persist a directly-posted job (from "Post a job") and surface it immediately on the board.
+window.addOwnedJob = function(key, job){
+  try {
+    const raw = localStorage.getItem(_OWNED_KEY); const all = raw?JSON.parse(raw):{};
+    all[key] = [job, ...(all[key]||[])]; localStorage.setItem(_OWNED_KEY, JSON.stringify(all));
+  } catch(e){}
+  if(SITES[key]) SITES[key].jobs = [job, ...SITES[key].jobs];
+};
+
 /* ============================================================
    LIVE Adzuna (Option A — browser-direct). Ideation only:
    the trial key is visible client-side. Adzuna sends CORS '*',
@@ -406,6 +445,12 @@ window.applyLiveJobs = function(key, jobs){
    across employers; app.jsx falls back to the static snapshot.
    ============================================================ */
 const _ADZ = { id:'50dc73db', key:'ca98692ac3f98547ad098d91133608e6' };
+/* Web3Forms — delivers on-page applications for owned/direct jobs (Model 1).
+   The access key is PUBLIC by design (safe client-side). Empty string => demo mode:
+   the form works end-to-end but nothing is delivered. Paste a free key from
+   web3forms.com (enter your email, key arrives instantly) to start receiving applications. */
+const _W3F = { key: '' };
+window._W3F = _W3F;
 const _SITEQ = { dietitian:'dietitian', electrician:'electrician', teaching:'teacher', company:'' };
 const _ST = {Alabama:'AL',Alaska:'AK',Arizona:'AZ',Arkansas:'AR',California:'CA',Colorado:'CO',Connecticut:'CT',Delaware:'DE',Florida:'FL',Georgia:'GA',Hawaii:'HI',Idaho:'ID',Illinois:'IL',Indiana:'IN',Iowa:'IA',Kansas:'KS',Kentucky:'KY',Louisiana:'LA',Maine:'ME',Maryland:'MD',Massachusetts:'MA',Michigan:'MI',Minnesota:'MN',Mississippi:'MS',Missouri:'MO',Montana:'MT',Nebraska:'NE',Nevada:'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND',Ohio:'OH',Oklahoma:'OK',Oregon:'OR',Pennsylvania:'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD',Tennessee:'TN',Texas:'TX',Utah:'UT',Vermont:'VT',Virginia:'VA',Washington:'WA','West Virginia':'WV',Wisconsin:'WI',Wyoming:'WY'};
 function _adzMap(item){

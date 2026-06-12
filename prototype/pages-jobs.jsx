@@ -5,14 +5,39 @@
 /* ---------- Apply modal ---------- */
 function ApplyModal({ site, job, onClose }){
   const [step,setStep] = useState(0);
-  const [f,setF] = useState({name:'',email:'',phone:'',note:''});
+  const [submitting,setSubmitting] = useState(false);
+  const [error,setError] = useState('');
+  const [f,setF] = useState({name:'',email:'',phone:'',note:'',file:null});
   const set = (k)=>(e)=>setF(s=>({...s,[k]:e.target.value}));
   useEffect(()=>{ const h=e=>{ if(e.key==='Escape') onClose(); }; window.addEventListener('keydown',h); return ()=>window.removeEventListener('keydown',h); },[]);
+  async function submit(e){
+    e.preventDefault(); setError(''); setSubmitting(true);
+    try {
+      const key = (window._W3F && window._W3F.key) || '';
+      if(!key){ await new Promise(r=>setTimeout(r,700)); setStep(1); }   // demo mode — no Web3Forms key set yet
+      else {
+        const fd = new FormData();
+        fd.append('access_key', key);
+        fd.append('subject', `New application — ${job.title} @ ${job.company}`);
+        fd.append('from_name', `${site.name} applications`);
+        fd.append('name', f.name); fd.append('email', f.email); fd.append('phone', f.phone||'');
+        fd.append('Applying for', `${job.title} — ${job.company}`);
+        fd.append('Board', site.name); fd.append('Listing contact', job.contactEmail||'n/a');
+        fd.append('message', f.note||'(no note)');
+        if(f.file) fd.append('attachment', f.file);
+        const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body:fd });
+        const data = await res.json().catch(()=>({}));
+        if(res.ok && (data.success===undefined || data.success)) setStep(1);
+        else throw new Error(data.message || 'Submission failed. Please try again.');
+      }
+    } catch(err){ setError((err && err.message) || 'Something went wrong. Please try again.'); }
+    finally { setSubmitting(false); }
+  }
   return (
     <div onClick={onClose} style={{position:'fixed',inset:0,zIndex:200,background:'rgba(20,24,31,.42)',backdropFilter:'blur(3px)',display:'grid',placeItems:'center',padding:20}}>
       <div onClick={e=>e.stopPropagation()} className="card" style={{width:'min(520px,100%)',maxHeight:'90vh',overflow:'auto',padding:'var(--s8)'}}>
         {step===0 ? (
-          <form onSubmit={e=>{e.preventDefault(); setStep(1);}}>
+          <form onSubmit={submit}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:16}}>
               <div>
                 <div style={{fontFamily:'var(--font-head)',fontWeight:700,fontSize:21}}>Apply for this role</div>
@@ -26,14 +51,18 @@ function ApplyModal({ site, job, onClose }){
                 <div className="field"><label>Email</label><input className="input" type="email" required value={f.email} onChange={set('email')} placeholder="you@email.com"/></div>
                 <div className="field"><label>Phone</label><input className="input" value={f.phone} onChange={set('phone')} placeholder="(555) 123-4567"/></div>
               </div>
-              <div className="field"><label>Resume</label>
-                <div className="card" style={{padding:'var(--s5)',border:'1px dashed var(--line-2)',textAlign:'center',color:'var(--ink-3)',fontSize:14}}>
-                  <Icon name="doc" size={22} style={{margin:'0 auto 8px'}}/>Drag a file here or <span style={{color:'var(--accent-ink)',fontWeight:600}}>browse</span><div style={{fontSize:12,marginTop:4}}>PDF or DOCX, up to 5MB</div>
-                </div>
+              <div className="field"><label>Resume <span style={{color:'var(--ink-4)',fontWeight:400}}>(optional)</span></label>
+                <label className="card" style={{padding:'var(--s5)',border:'1px dashed var(--line-2)',textAlign:'center',color:'var(--ink-3)',fontSize:14,cursor:'pointer',display:'block'}}>
+                  <input type="file" accept=".pdf,.doc,.docx" style={{display:'none'}} onChange={e=>setF(s=>({...s,file:(e.target.files&&e.target.files[0])||null}))}/>
+                  <Icon name="doc" size={22} style={{margin:'0 auto 8px'}}/>
+                  {f.file ? <span style={{color:'var(--accent-ink)',fontWeight:600}}>{f.file.name}</span> : <>Drag a file here or <span style={{color:'var(--accent-ink)',fontWeight:600}}>browse</span></>}
+                  <div style={{fontSize:12,marginTop:4}}>PDF or DOCX, up to 5MB</div>
+                </label>
               </div>
               <div className="field"><label>Note to the hiring team <span style={{color:'var(--ink-4)',fontWeight:400}}>(optional)</span></label><textarea className="textarea" style={{minHeight:88}} value={f.note} onChange={set('note')} placeholder="A sentence on why you’re a great fit."/></div>
             </div>
-            <button type="submit" className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s6)'}}>Submit application</button>
+            <button type="submit" className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s6)'}} disabled={submitting}>{submitting?'Submitting…':'Submit application'}</button>
+            {error && <p style={{color:'#c0362c',fontSize:13,textAlign:'center',marginTop:10}}>{error}</p>}
             <p style={{color:'var(--ink-4)',fontSize:12.5,textAlign:'center',marginTop:12}}>Your application goes directly to {job.company}.</p>
           </form>
         ) : (
@@ -122,6 +151,9 @@ function JobDetail({ site, id }){
                   {job.applyUrl
                     ? <a className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} href={job.applyUrl} target="_blank" rel="noopener noreferrer">Apply now <Icon name="arrowUpRight" size={16}/></a>
                     : <button className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} onClick={()=>setApplying(true)}>Apply now</button>}
+                  <div style={{color:'var(--ink-4)',fontSize:12.5,textAlign:'center',marginTop:10}}>
+                    {job.applyUrl ? 'Opens the employer’s site in a new tab.' : 'Apply right here — no redirect.'}
+                  </div>
                   <button className="btn btn-ghost btn-block" style={{marginTop:10}} onClick={()=>setSaved(s=>!s)}>
                     <Icon name="heart" size={16} style={saved?{color:'var(--accent)'}:undefined}/> {saved?'Saved':'Save job'}
                   </button>
