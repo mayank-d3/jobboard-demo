@@ -371,8 +371,20 @@ Object.assign(window, {
   monoColor, initials, slug,
 });
 
-// Overwrite a site's jobs with live/snapshot results (everything reads window.SITES).
-window.applyLiveJobs = function(key, jobs){ if (SITES[key] && jobs && jobs.length) SITES[key].jobs = jobs; };
+// Skeleton until the first live load completes (prevents mock flashing in).
+window.__jobsLoading = true;
+// Overwrite a site's jobs with live results AND rebuild employers (so trust bar / directory show real companies, not mock).
+window.applyLiveJobs = function(key, jobs){
+  if (SITES[key] && jobs && jobs.length){
+    SITES[key].jobs = jobs;
+    const byCo = {};
+    jobs.forEach(j=>{
+      if(!byCo[j.companyId]) byCo[j.companyId] = { id:j.companyId, name:j.company, hq:(j.city&&j.st)?`${j.city}, ${j.st}`:'', size:'', founded:'', blurb:`${j.company} is actively hiring on ${SITES[key].name}.`, openRoles:0 };
+      byCo[j.companyId].openRoles++;
+    });
+    SITES[key].employers = Object.values(byCo);
+  }
+};
 
 /* ============================================================
    LIVE Adzuna (Option A — browser-direct). Ideation only:
@@ -406,13 +418,13 @@ function _diversify(jobs, limit){
 }
 window.fetchLiveJobs = async function(siteKey){
   const what = _SITEQ[siteKey] || '';
-  let raw = [];
-  for(const p of [1,2,3]){
+  const urls = [1,2,3].map(p=>{
     let u = `https://api.adzuna.com/v1/api/jobs/us/search/${p}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&where=us&content-type=application/json`;
     if(what) u += `&what=${encodeURIComponent(what)}`;
-    const r = await fetch(u); if(!r.ok) continue;
-    const d = await r.json(); raw = raw.concat(d.results||[]);
-  }
+    return u;
+  });
+  const pages = await Promise.all(urls.map(u => fetch(u).then(r=> r.ok ? r.json() : {results:[]}).catch(()=>({results:[]}))));
+  const raw = pages.reduce((acc,d)=> acc.concat(d.results||[]), []);
   const seen = new Set();
   const mapped = raw.filter(it=>{ if(seen.has(it.id)) return false; seen.add(it.id); return true; }).map(_adzMap);
   return _diversify(mapped, 24);

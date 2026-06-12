@@ -193,11 +193,11 @@ function TrustBar({ site }){
           <span className="pulse"></span>
           <span className="l">Updated daily</span>
         </div>
-        <div className="tb-logos">
+        {!window.__jobsLoading && <div className="tb-logos">
           {site.employers.slice(0,5).map(e=>(
             <span key={e.id} className="lg">{e.name.replace(/ (Health System|Medical Center|School District|Public Schools|Contractors|Solutions|Services|Group|Co\.)$/,'')}</span>
           ))}
-        </div>
+        </div>}
       </div>
     </div>
   );

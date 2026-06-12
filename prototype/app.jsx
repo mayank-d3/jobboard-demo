@@ -138,13 +138,14 @@ function App(){
 
   useEffect(()=>{ document.title = route.site && SITES[route.site] ? SITES[route.site].name : 'Job Board — Template Prototype'; },[route.site, route.page]);
 
-  // Load jobs for the current site: LIVE Adzuna ONLY (no JSON snapshot; mock stays as the instant placeholder until live resolves).
+  // Load jobs for the current site: LIVE Adzuna ONLY. Show a skeleton (not mock) until it resolves.
   useEffect(()=>{
     if(!route.site || !SITES[route.site]) return;
     let cancelled = false;
+    window.__jobsLoading = true; setLiveVer(v=>v+1);
     window.fetchLiveJobs(route.site)
-      .then(jobs=>{ if(!cancelled && jobs && jobs.length){ window.applyLiveJobs(route.site, jobs); setLiveVer(v=>v+1); } })
-      .catch(()=>{}); // on failure the mock placeholder remains
+      .then(jobs=>{ if(cancelled) return; if(jobs && jobs.length) window.applyLiveJobs(route.site, jobs); window.__jobsLoading = false; setLiveVer(v=>v+1); })
+      .catch(()=>{ if(!cancelled){ window.__jobsLoading = false; setLiveVer(v=>v+1); } });
     return ()=>{ cancelled = true; };
   },[route.site]);
 

@@ -4,10 +4,20 @@
    ============================================================ */
 
 function HeroArt({ site }){
+  const loading = window.__jobsLoading;
+  const sk = (w)=> <div style={{height:12, width:w, borderRadius:6, background:'var(--paper-2)'}}></div>;
   const jobs = site.jobs.slice(0,2);
   return (
     <div className="hero-art">
-      {jobs.map((j,i)=>(
+      {(loading ? [0,1] : jobs).map((j,i)=> loading ? (
+        <div key={i} className="hero-card">
+          <div style={{display:'flex',gap:14,alignItems:'center'}}>
+            <div style={{width:44,height:44,borderRadius:13,background:'var(--paper-2)',flex:'none'}}></div>
+            <div style={{flex:1,display:'flex',flexDirection:'column',gap:9}}>{sk('72%')}{sk('46%')}</div>
+          </div>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginTop:14,paddingTop:14,borderTop:'1px solid var(--line)'}}>{sk(60)}{sk(52)}</div>
+        </div>
+      ) : (
         <div key={j.id} className="hero-card reveal" style={{animationDelay:(0.15+i*0.08)+'s'}}>
           <div style={{display:'flex',gap:14,alignItems:'center'}}>
             <CompanyLogo name={j.company} size={44}/>
@@ -25,7 +35,7 @@ function HeroArt({ site }){
       <div className="ha-float reveal" style={{animationDelay:'0.4s'}}>
         <span className="pulse"></span>
         <div style={{fontSize:13.5}}>
-          <strong style={{fontFamily:'var(--font-head)'}} className="tnum">{(site.jobs.length*3+4)}</strong> new this week
+          <strong style={{fontFamily:'var(--font-head)'}} className="tnum">{loading ? '—' : (site.jobs.length*3+4)}</strong> new this week
         </div>
       </div>
     </div>
