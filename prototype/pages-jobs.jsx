@@ -176,7 +176,7 @@ function Browse({ site, query }){
 
   let results = site.jobs.filter(j=>{
     if(q){ const s=(j.title+' '+j.company).toLowerCase(); if(!s.includes(q.toLowerCase())) return false; }
-    if(cityF && j.city!==cityF) return false;
+    if(cityF && !((j.city||'').toLowerCase().includes(cityF.toLowerCase()))) return false;
     if(roleF){ const rk=roleF.toLowerCase().split(/[ /]+/)[0]; if(!j.title.toLowerCase().includes(rk)) return false; }
     if(catF){ /* generic categories: keyword loose match, else allow */ }
     if(types.length && !types.includes(j.type)) return false;
@@ -235,6 +235,7 @@ function Browse({ site, query }){
                   );
                 })}
               </div>
+              {site.jobs.some(j=>j.level) && (
               <div className="fp-group">
                 <div className="fp-title">Experience</div>
                 {site.levels.map(l=>{
@@ -245,6 +246,7 @@ function Browse({ site, query }){
                   );
                 })}
               </div>
+              )}
               {site.jobs.filter(j=>j.remote).length > 0 && (
                 <div className="fp-group">
                   <div className="fp-title">Workplace</div>

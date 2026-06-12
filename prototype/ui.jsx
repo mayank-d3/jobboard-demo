@@ -254,7 +254,11 @@ function FeaturedCard({ site, job }){
         <div className="jcard-sal tnum">{fmtSalaryShort(job)}</div>
         <div className="jcard-foot-row">
           <span className="jcard-loc">{job.remote?'Remote':`${job.city}, ${job.st}`}</span>
-          <span className="btn btn-dark btn-sm">Apply now</span>
+          {job.applyUrl
+            ? <span role="link" tabIndex={0} className="btn btn-dark btn-sm"
+                onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); window.open(job.applyUrl,'_blank','noopener,noreferrer'); }}
+                onKeyDown={(e)=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); window.open(job.applyUrl,'_blank','noopener,noreferrer'); } }}>Apply now</span>
+            : <span className="btn btn-dark btn-sm">Apply now</span>}
         </div>
       </div>
     </a>
@@ -286,12 +290,20 @@ function JobCard({ site, job }){
 }
 
 /* ---------- city / role chips ---------- */
+function ChipSkeleton({ n=6 }){
+  return <div className="chip-row" aria-hidden="true">{Array.from({length:n}).map((_,i)=>(
+    <span key={i} className="chip"><span style={{display:'inline-block',width:64+(i%3)*26,height:12,background:'var(--paper-2)',borderRadius:6}}></span></span>
+  ))}</div>;
+}
 function CityChips({ site, limit=10 }){
+  if(window.__jobsLoading) return <ChipSkeleton/>;
+  const list = (site.liveCities && site.liveCities.length ? site.liveCities : site.cities).slice(0,limit);
+  if(!list.length) return null;
   return (
     <div className="chip-row">
-      {site.cities.slice(0,limit).map(c=>(
+      {list.map(c=>(
         <a key={c.city+c.st} href={href(site.key,'jobs')+'?city='+encodeURIComponent(c.city)} className="chip">
-          <Icon name="pin" size={14} />{c.city}, {c.st}
+          <Icon name="pin" size={14} />{c.city}{c.st?', '+c.st:''}
           <span className="c-count tnum">{c.count.toLocaleString('en-US')}</span>
         </a>
       ))}
@@ -299,9 +311,12 @@ function CityChips({ site, limit=10 }){
   );
 }
 function RoleChips({ site, limit=8 }){
+  if(window.__jobsLoading) return <ChipSkeleton n={5}/>;
+  const list = (site.liveRoles && site.liveRoles.length ? site.liveRoles : site.roles).slice(0,limit);
+  if(!list.length) return null;
   return (
     <div className="chip-row">
-      {site.roles.slice(0,limit).map(r=>(
+      {list.map(r=>(
         <a key={r.name} href={href(site.key,'jobs')+'?role='+encodeURIComponent(r.name)} className="chip">
           {r.name}<span className="c-count tnum">{r.count.toLocaleString('en-US')}</span>
         </a>

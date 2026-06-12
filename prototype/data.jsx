@@ -383,6 +383,19 @@ window.applyLiveJobs = function(key, jobs){
       byCo[j.companyId].openRoles++;
     });
     SITES[key].employers = Object.values(byCo);
+
+    // cities derived from the loaded jobs (real, if small, counts)
+    const byCity = {};
+    jobs.forEach(j=>{ if(!j.city) return; const ck=j.city+'|'+(j.st||''); if(!byCity[ck]) byCity[ck]={city:j.city, st:j.st||'', count:0}; byCity[ck].count++; });
+    SITES[key].liveCities = Object.values(byCity).sort((a,b)=>b.count-a.count);
+
+    // specialties: curated role labels that actually appear in the loaded titles
+    // (same first-word match the Browse page uses, so chip counts == results)
+    const roleSrc = (VERTICALS[key] && VERTICALS[key].roles) || [];
+    SITES[key].liveRoles = roleSrc.map(r=>{
+      const kw = r.name.toLowerCase().split(/[ /]+/)[0];
+      return { name:r.name, count: jobs.filter(j=>(j.title||'').toLowerCase().includes(kw)).length };
+    }).filter(r=>r.count>0).sort((a,b)=>b.count-a.count);
   }
 };
 
