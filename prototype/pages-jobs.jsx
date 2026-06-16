@@ -147,7 +147,7 @@ function JobDetail({ site, id }){
                   <div style={{color:'var(--ink-3)',fontSize:13,fontWeight:600,fontFamily:'var(--font-head)',textTransform:'uppercase',letterSpacing:'.06em'}}>Salary</div>
                   <div className="jc-salary tnum" style={{fontSize:26,marginTop:6}}>{fmtSalary(job)}</div>
                   {job.hourly && <div style={{color:'var(--ink-3)',fontSize:13,marginTop:4}}>≈ {fmtMoney(job.salLo)} – {fmtMoney(job.salHi)} / yr</div>}
-                  {job.applyUrl && <a className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} href={job.applyUrl} target="_blank" rel="noopener noreferrer" onClick={()=>{ window.track&&window.track('apply_click',{job_title:job.title,company:job.company,site:site.key,source:'detail'}); }}>Apply now <Icon name="arrowUpRight" size={16}/></a>}
+                  {job.applyUrl && <a className="btn btn-primary btn-lg btn-block" style={{marginTop:'var(--s5)'}} href={job.applyUrl} target="_blank" rel="noopener noreferrer" onClick={()=>{ window.track&&window.track('apply_clicked',{job_title:job.title,company:job.company,site:site.key,source:'detail'}); }}>Apply now <Icon name="arrowUpRight" size={16}/></a>}
                   <div style={{color:'var(--ink-4)',fontSize:12.5,textAlign:'center',marginTop:10}}>Opens the employer’s site in a new tab.</div>
                   <button className="btn btn-ghost btn-block" style={{marginTop:10}} onClick={()=>setSaved(s=>!s)}>
                     <Icon name="heart" size={16} style={saved?{color:'var(--accent)'}:undefined}/> {saved?'Saved':'Save job'}

@@ -227,7 +227,7 @@ function SaveBtn({ compact }){
   const [on,setOn] = useState(false);
   return (
     <button className={'savebtn'+(on?' on':'')} aria-pressed={on}
-      onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); setOn(s=>{ if(!s) window.track&&window.track('save_job',{}); return !s; }); }}>
+      onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); setOn(s=>{ if(!s) window.track&&window.track('job_saved',{}); return !s; }); }}>
       <Icon name={on?'bookmarkFill':'bookmark'} size={14} stroke={1.8}/>{compact?null:(on?'Saved':'Save')}
     </button>
   );
@@ -256,8 +256,8 @@ function FeaturedCard({ site, job }){
           <span className="jcard-loc">{job.remote?'Remote':`${job.city}, ${job.st}`}</span>
           {job.applyUrl
             ? <span role="link" tabIndex={0} className="btn btn-dark btn-sm"
-                onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_click',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); }}
-                onKeyDown={(e)=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_click',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); } }}>Apply now</span>
+                onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_clicked',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); }}
+                onKeyDown={(e)=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_clicked',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); } }}>Apply now</span>
             : <span className="btn btn-dark btn-sm">Apply now</span>}
         </div>
       </div>
@@ -302,7 +302,7 @@ function CityChips({ site, limit=10 }){
   return (
     <div className="chip-row">
       {list.map(c=>(
-        <a key={c.city+c.st} href={href(site.key,'jobs')+'?city='+encodeURIComponent(c.city)} className="chip" onClick={()=>{ window.track&&window.track('browse_chip',{kind:'city',value:c.city,site:site.key}); }}>
+        <a key={c.city+c.st} href={href(site.key,'jobs')+'?city='+encodeURIComponent(c.city)} className="chip" onClick={()=>{ window.track&&window.track('category_clicked',{kind:'city',value:c.city,site:site.key}); }}>
           <Icon name="pin" size={14} />{c.city}{c.st?', '+c.st:''}
           <span className="c-count tnum">{c.count.toLocaleString('en-US')}</span>
         </a>
@@ -317,7 +317,7 @@ function RoleChips({ site, limit=8 }){
   return (
     <div className="chip-row">
       {list.map(r=>(
-        <a key={r.name} href={href(site.key,'jobs')+'?role='+encodeURIComponent(r.name)} className="chip" onClick={()=>{ window.track&&window.track('browse_chip',{kind:'role',value:r.name,site:site.key}); }}>
+        <a key={r.name} href={href(site.key,'jobs')+'?role='+encodeURIComponent(r.name)} className="chip" onClick={()=>{ window.track&&window.track('category_clicked',{kind:'role',value:r.name,site:site.key}); }}>
           {r.name}<span className="c-count tnum">{r.count.toLocaleString('en-US')}</span>
         </a>
       ))}
@@ -362,7 +362,7 @@ function EmailCapture({ site, title, sub }){
                   <span>You’re subscribed. We’ll be in touch.</span>
                 </div>
               ) : (
-                <form className="alert-form" onSubmit={e=>{e.preventDefault(); if(v.includes('@')){ window.track&&window.track('email_signup',{source:'alert_band',site:site.key}); setDone(true);} }}>
+                <form className="alert-form" onSubmit={e=>{e.preventDefault(); if(v.includes('@')){ window.track&&window.track('alert_signup',{source:'alert_band',site:site.key}); setDone(true);} }}>
                   <input className="input" type="email" placeholder="you@email.com" value={v} onChange={e=>setV(e.target.value)} required />
                   <button className="btn btn-lg" type="submit">Create alert</button>
                 </form>
