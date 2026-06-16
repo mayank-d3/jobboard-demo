@@ -223,11 +223,11 @@ function SectionHead({ eyebrow, title, sub, action, center }){
 function SoonPill(){ return <span className="soon-pill">Soon</span>; }
 
 /* ---------- save button (used on cards) ---------- */
-function SaveBtn({ compact }){
+function SaveBtn({ compact, job, site }){
   const [on,setOn] = useState(false);
   return (
     <button className={'savebtn'+(on?' on':'')} aria-pressed={on}
-      onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); setOn(s=>{ if(!s) window.track&&window.track('job_saved',{}); return !s; }); }}>
+      onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); setOn(s=>{ if(!s) window.track&&window.track('job_saved',{job_title:job&&job.title,company:job&&job.company,site}); return !s; }); }}>
       <Icon name={on?'bookmarkFill':'bookmark'} size={14} stroke={1.8}/>{compact?null:(on?'Saved':'Save')}
     </button>
   );
@@ -239,7 +239,7 @@ function FeaturedCard({ site, job }){
     <a href={href(site.key,'jobs',job.id)} className="jcard">
       <div className="jcard-top">
         <CompanyLogo name={job.company} size={54}/>
-        <SaveBtn/>
+        <SaveBtn job={job} site={site.key}/>
       </div>
       <div className="jcard-co"><b>{job.company}</b> · {fmtPosted(job.posted).replace('Posted ','')}</div>
       <div className="jcard-title">{job.title}</div>
@@ -281,7 +281,7 @@ function JobCard({ site, job }){
         </div>
       </div>
       <div className="jc-right">
-        <SaveBtn compact/>
+        <SaveBtn compact job={job} site={site.key}/>
         <span className="jc-salary tnum">{fmtSalary(job)}</span>
         <span className="jc-posted">{fmtPosted(job.posted)}</span>
       </div>
