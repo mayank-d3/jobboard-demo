@@ -75,15 +75,6 @@ function PostJob({ site }){
           ) : (
             <form onSubmit={e=>{
               e.preventDefault();
-              const parts=(f.city||'').split(',');
-              const job={ id:site.key+'-own-'+Date.now(), owned:true, title:f.title||'Untitled role',
-                company:f.company||'Your company', companyId: slug(f.company||'your-company'),
-                city:(parts[0]||'').trim(), st:(parts[1]||'').trim(), remote:/remote/i.test(f.city||''),
-                type:f.type, level:'', salLo:f.salLo?parseInt(f.salLo,10):null, salHi:f.salHi?parseInt(f.salHi,10):null,
-                salUnit:'yr', hourly:null, posted:0, featured:true, tags:[f.type,'Direct'],
-                desc:{ intro:f.desc||`${f.company||'This employer'} is hiring a ${f.title||'new team member'}. Apply directly on this board.`, resp:[], reqs:[] },
-                applyUrl:null, contactEmail:f.email };
-              if(window.addOwnedJob) window.addOwnedJob(site.key, job);
               window.track&&window.track('post_job',{site:site.key,plan});
               setSent(true); window.scrollTo(0,0);
             }}>

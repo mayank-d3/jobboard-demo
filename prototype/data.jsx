@@ -329,18 +329,10 @@ function _mkOwned(key, i, o){
     applyUrl:null, contactEmail:o.email||''
   };
 }
-const OWNED_SEED = {
-  dietitian:[ _mkOwned('dietitian',1,{title:'Clinical Dietitian (Direct Hire)',company:'Riverbend Family Health',city:'Madison',st:'WI',level:'Mid level',salLo:62000,salHi:78000,intro:'Riverbend Family Health is hiring a clinical dietitian for our outpatient clinic. Apply directly here — we review every application in-house, no third party.'}) ],
-  electrician:[ _mkOwned('electrician',1,{title:'Journeyman Electrician (Direct Hire)',company:'Copperline Electric',city:'Austin',st:'TX',level:'Journeyman',salLo:62000,salHi:84000,intro:'Copperline Electric is a local commercial shop hiring journeyman electricians. Apply directly here — you talk to us, not a recruiter.'}) ],
-  teaching:[ _mkOwned('teaching',1,{title:'Elementary Teacher (Direct Hire)',company:'Birch Grove Charter',city:'Denver',st:'CO',level:'Licensed',salLo:48000,salHi:64000,intro:'Birch Grove Charter is hiring a 3rd-grade lead teacher. We accept applications directly on this board.'}) ],
-  company:[ _mkOwned('company',1,{title:'Customer Support Specialist (Direct Hire)',company:'Northstar SaaS',city:'Remote',st:'',remote:true,level:'Entry level',salLo:46000,salHi:58000,intro:'Northstar SaaS hires support specialists directly through this board — no third-party recruiters.'}) ],
-};
+// Seeded "direct hire" demo jobs removed — the board shows REAL Adzuna feed jobs only.
+const OWNED_SEED = { dietitian:[], electrician:[], teaching:[], company:[] };
 const _OWNED_KEY = 'jb_owned_v1';
-function getOwnedJobs(key){
-  let posted=[];
-  try { const raw=localStorage.getItem(_OWNED_KEY); if(raw){ const all=JSON.parse(raw); posted=all[key]||[]; } } catch(e){}
-  return [...posted, ...(OWNED_SEED[key]||[])];
-}
+function getOwnedJobs(key){ return []; }   // feed-only pilot: no owned/direct jobs (real listings only)
 
 /* build full SITES object with generated jobs + employer derivations */
 const SITES = {};

@@ -246,9 +246,7 @@ function FeaturedCard({ site, job }){
       <div className="jcard-tags">
         <span className="tag">{job.type}</span>
         <span className="tag">{job.remote?'Remote':job.level}</span>
-        {job.owned
-          ? <span className="tag accent"><Icon name="bolt" size={11} stroke={2}/>Apply here</span>
-          : job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
+        {job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
       </div>
       <div className="jcard-spacer"></div>
       <div className="jcard-rule"></div>
@@ -279,9 +277,7 @@ function JobCard({ site, job }){
           <span className="tag"><Icon name="pin" size={13}/>{job.remote?'Remote':`${job.city}, ${job.st}`}</span>
           <span className="tag">{job.type}</span>
           <span className="tag">{job.level}</span>
-          {job.owned
-            ? <span className="tag accent"><Icon name="bolt" size={11} stroke={2}/>Apply here</span>
-            : job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
+          {job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
         </div>
       </div>
       <div className="jc-right">
