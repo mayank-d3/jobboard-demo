@@ -9,12 +9,12 @@ function ApplyModal({ site, job, onClose }){
   const [error,setError] = useState('');
   const [f,setF] = useState({name:'',email:'',phone:'',note:'',file:null});
   const set = (k)=>(e)=>setF(s=>({...s,[k]:e.target.value}));
-  useEffect(()=>{ const h=e=>{ if(e.key==='Escape') onClose(); }; window.addEventListener('keydown',h); return ()=>window.removeEventListener('keydown',h); },[]);
+  useEffect(()=>{ window.track&&window.track('apply_start',{job_title:job.title,company:job.company,site:site.key}); const h=e=>{ if(e.key==='Escape') onClose(); }; window.addEventListener('keydown',h); return ()=>window.removeEventListener('keydown',h); },[]);
   async function submit(e){
     e.preventDefault(); setError(''); setSubmitting(true);
     try {
       const key = (window._W3F && window._W3F.key) || '';
-      if(!key){ await new Promise(r=>setTimeout(r,700)); setStep(1); }   // demo mode — no Web3Forms key set yet
+      if(!key){ await new Promise(r=>setTimeout(r,700)); window.track&&window.track('apply_submit',{job_title:job.title,company:job.company,site:site.key,mode:'demo'}); setStep(1); }   // demo mode — no Web3Forms key set yet
       else {
         const fd = new FormData();
         fd.append('access_key', key);
@@ -27,7 +27,7 @@ function ApplyModal({ site, job, onClose }){
         if(f.file) fd.append('attachment', f.file);
         const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body:fd });
         const data = await res.json().catch(()=>({}));
-        if(res.ok && (data.success===undefined || data.success)) setStep(1);
+        if(res.ok && (data.success===undefined || data.success)){ window.track&&window.track('apply_submit',{job_title:job.title,company:job.company,site:site.key,mode:'live'}); setStep(1); }
         else throw new Error(data.message || 'Submission failed. Please try again.');
       }
     } catch(err){ setError((err && err.message) || 'Something went wrong. Please try again.'); }

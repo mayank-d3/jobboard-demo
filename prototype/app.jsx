@@ -149,6 +149,21 @@ function App(){
     return ()=>{ cancelled = true; };
   },[route.site]);
 
+  // Rich analytics: fire a semantic *_view event on every route so GA shows what's actually viewed.
+  useEffect(()=>{
+    if(!window.track) return;
+    const { site, page, rest } = route;
+    if(!site || !SITES[site]){ window.track('launcher_view', {}); return; }
+    if(page==='jobs' && rest){ const j = getJob(site, rest); window.track('job_view', j ? {job_title:j.title, company:j.company, site} : {site}); }
+    else if(page==='jobs'){ window.track('browse_jobs', {site}); }
+    else if(page==='salary'){ window.track('salary_view', {site}); }
+    else if(page==='employers' || page==='employer'){ window.track('employers_view', {site}); }
+    else if(page==='post'){ window.track('post_view', {site}); }
+    else if(page==='guide'){ window.track('guide_view', {site}); }
+    else if(page==='about'){ window.track('about_view', {site}); }
+    else { window.track('home_view', {site}); }
+  },[route.raw]);
+
 
   const onSite = !!route.site && !!SITES[route.site];
   const site = onSite ? SITES[route.site] : null;

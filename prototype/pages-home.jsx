@@ -126,7 +126,7 @@ function NicheHome({ site }){
 /* ---------- GENERIC home (search-first + category grid) ---------- */
 function GenericSearch({ site }){
   const [q,setQ] = useState(''); const [loc,setLoc] = useState('');
-  const submit = (e)=>{ e.preventDefault(); let u = href(site.key,'jobs'); const ps=[]; if(q) ps.push('q='+encodeURIComponent(q)); if(loc) ps.push('city='+encodeURIComponent(loc)); if(ps.length) u+='?'+ps.join('&'); navigate(u); };
+  const submit = (e)=>{ e.preventDefault(); window.track&&window.track('search',{search_term:q||'',location:loc||'',site:site.key}); let u = href(site.key,'jobs'); const ps=[]; if(q) ps.push('q='+encodeURIComponent(q)); if(loc) ps.push('city='+encodeURIComponent(loc)); if(ps.length) u+='?'+ps.join('&'); navigate(u); };
   return (
     <form className="searchbar reveal" style={{animationDelay:'.12s'}} onSubmit={submit}>
       <div className="seg">

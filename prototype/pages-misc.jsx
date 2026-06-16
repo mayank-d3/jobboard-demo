@@ -84,6 +84,7 @@ function PostJob({ site }){
                 desc:{ intro:f.desc||`${f.company||'This employer'} is hiring a ${f.title||'new team member'}. Apply directly on this board.`, resp:[], reqs:[] },
                 applyUrl:null, contactEmail:f.email };
               if(window.addOwnedJob) window.addOwnedJob(site.key, job);
+              window.track&&window.track('post_job',{site:site.key,plan});
               setSent(true); window.scrollTo(0,0);
             }}>
               <SectionHead eyebrow={`${PLANS.find(p=>p.id===plan).name} plan selected`} title="Post a job" sub="Fill in the details below. You can edit anything before it goes live." />
@@ -151,7 +152,7 @@ function SalaryTool({ site }){
                 <select className="select" value={loc} onChange={e=>setLoc(e.target.value)}>{site.cities.map(c=><option key={c.city+c.st}>{c.city}, {c.st}</option>)}</select>
               </div>
               <div className="field"><label>Experience</label><select className="select" value={exp} onChange={e=>setExp(e.target.value)}>{exps.map(x=><option key={x}>{x}</option>)}</select></div>
-              <button className="btn btn-primary btn-lg btn-block" onClick={()=>setCalc(true)}>Estimate salary</button>
+              <button className="btn btn-primary btn-lg btn-block" onClick={()=>{ window.track&&window.track('salary_estimate',{role,location:loc,exp,site:site.key}); setCalc(true); }}>Estimate salary</button>
             </div>
 
             <div className="salary-result">
