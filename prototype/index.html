@@ -8,6 +8,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics 4 (pilot). Replace the placeholder ID with the real
+       Measurement ID (G-XXXXXXXXXX). Placeholder = safe no-op (won't load or send). -->
+  <script>
+    window.__GA_ID = 'G-GNK7KMY326'; /* GA4 — "Job Board Pilot" data stream */
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    window.track = function(name, params){ try { if (window.__GA_READY) gtag('event', name, params || {}); } catch (e) {} };
+    (function(){
+      var id = window.__GA_ID;
+      if (!id || /X{4,}/.test(id)) return;            /* not configured yet -> no-op */
+      window.__GA_READY = true;
+      var s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', id);
+      /* hash-router SPA: count each #/route change as a page_view */
+      window.addEventListener('hashchange', function(){
+        gtag('event', 'page_view', { page_location: location.href, page_path: location.pathname + location.hash });
+      });
+    })();
+  </script>
 </head>
 <body>
   <div id="root"></div>

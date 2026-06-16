@@ -258,8 +258,8 @@ function FeaturedCard({ site, job }){
           <span className="jcard-loc">{job.remote?'Remote':`${job.city}, ${job.st}`}</span>
           {job.applyUrl
             ? <span role="link" tabIndex={0} className="btn btn-dark btn-sm"
-                onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); window.open(job.applyUrl,'_blank','noopener,noreferrer'); }}
-                onKeyDown={(e)=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); window.open(job.applyUrl,'_blank','noopener,noreferrer'); } }}>Apply now</span>
+                onClick={(e)=>{ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_click',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); }}
+                onKeyDown={(e)=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); window.track&&window.track('apply_click',{job_title:job.title,company:job.company,site:site.key,source:'card'}); window.open(job.applyUrl,'_blank','noopener,noreferrer'); } }}>Apply now</span>
             : <span className="btn btn-dark btn-sm">Apply now</span>}
         </div>
       </div>
