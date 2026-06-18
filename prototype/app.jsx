@@ -159,7 +159,7 @@ function App(){
     }
   },[t.site]);
 
-  useEffect(()=>{ document.title = route.site && SITES[route.site] ? SITES[route.site].name : 'Job Board — Template Prototype'; },[route.site, route.page]);
+  useEffect(()=>{ document.title = route.site && SITES[route.site] ? SITES[route.site].name : 'Job board template demo'; },[route.site, route.page]);
 
   // Load jobs for the current site: LIVE Adzuna ONLY. Show a skeleton (not mock) until it resolves.
   useEffect(()=>{
