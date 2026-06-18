@@ -3,7 +3,8 @@
    ============================================================ */
 
 /* ---------- accent palette (computed in JS so no color-mix is needed) ---------- */
-const SITE_ACCENT = { dietitian:'#0B7D61', electrician:'#C2410C', teaching:'#4338CA', company:'#1D4ED8' };
+const SITE_ACCENT = { dietitian:'#0B7D61', electrician:'#C2410C', teaching:'#4338CA', company:'#1D4ED8', jobsure:'#0F7C8C' };
+const SITE_FONTS = { jobsure:{ head:'Plus Jakarta Sans', body:'Hanken Grotesk' } };
 function hexRgb(h){ h=h.replace('#',''); if(h.length===3) h=h.split('').map(c=>c+c).join(''); return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]; }
 function mix(a,b,t){ return a.map((v,i)=>Math.round(v+(b[i]-v)*t)); }
 function rgbHex(r){ return '#'+r.map(v=>Math.max(0,Math.min(255,v)).toString(16).padStart(2,'0')).join(''); }
@@ -170,18 +171,25 @@ function App(){
 
   // active accent: tweak override (when not matching site) or the site's own seed
   const activeAccent = (onSite && !t.matchSiteAccent && t.accent) ? t.accent : (onSite ? SITE_ACCENT[route.site] : SITE_ACCENT.company);
+  // per-site brand fonts (e.g. JobSure) — used unless the heading-font tweak was changed from default
+  const siteFonts = onSite ? SITE_FONTS[route.site] : null;
+  const headFont = (t.headFont && t.headFont !== 'Bricolage Grotesque') ? t.headFont : (siteFonts?.head || 'Bricolage Grotesque');
   // root style overrides from tweaks
   const rootStyle = {
     '--d': DENSITY[t.density] ?? 1,
     '--r': RADIUS[t.radius] ?? 1,
-    '--font-head': `'${t.headFont}', system-ui, sans-serif`,
+    '--font-head': `'${headFont}', system-ui, sans-serif`,
     ...accentVars(activeAccent),
   };
+  if(siteFonts?.body){
+    rootStyle['--font-body'] = `'${siteFonts.body}', system-ui, sans-serif`;
+    rootStyle['fontFamily'] = `'${siteFonts.body}', system-ui, sans-serif`;
+  }
 
   const panel = (
     <TweaksPanel>
       <TweakSection label="Prototype" />
-      <TweakSelect label="Example site" value={onSite?route.site:'auto'} options={['auto','dietitian','electrician','teaching','company']}
+      <TweakSelect label="Example site" value={onSite?route.site:'auto'} options={['auto','jobsure','dietitian','electrician','teaching','company']}
         onChange={(v)=>{ setTweak('site', v); if(v==='auto') navigate('#/'); else navigate(href(v)); }} />
       {onSite && site.mode!=='generic' && (
         <TweakRadio label="Home layout" value={t.homeMode} options={['auto','niche','generic']}

@@ -115,6 +115,16 @@ function Mono({ name, size=44, round=false, className, style }){
 /* ---------- brand wordmark ---------- */
 function BrandMark({ site, size=34 }){
   const name = site.name;
+  if(site.key==='jobsure'){
+    return (
+      <a href={href(site.key)} className="brand" aria-label="JobSure">
+        <span className="bm mono" style={{ background:'var(--accent)', width:size, height:size }}>
+          <svg viewBox="0 0 24 24" width={Math.round(size*0.58)} height={Math.round(size*0.58)} fill="none" stroke="#fff" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.3 4.3L19 7"/></svg>
+        </span>
+        <span className="bn">Job<span className="dot">Sure</span></span>
+      </a>
+    );
+  }
   const word = name.replace(/ Jobs$| Careers$/,'');
   const suffix = name.endsWith('Careers') ? 'Careers' : name.endsWith('Jobs') ? 'Jobs' : '';
   return (

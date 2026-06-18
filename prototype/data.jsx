@@ -272,6 +272,18 @@ const VERTICALS = {
   },
 };
 
+/* JobSure — re-skin of the generic all-industries board. Brand, domain, accent,
+   fonts, and hero copy only; structure/features unchanged. (genJobs reseeds by key.) */
+VERTICALS.jobsure = {
+  ...VERTICALS.company,
+  key:'jobsure',
+  name:'JobSure',
+  domain:'jobsure.com',
+  tagline:'Search thousands of roles from verified employers across every industry — and apply with confidence.',
+  heroTitle:{ lead:'Your next job.', accent:'For sure.' },
+  totalJobs: 21480,
+};
+
 /* ---------- generate listings ---------- */
 function genJobs(v){
   const rng = seeded(hashStr(v.key));
@@ -443,7 +455,7 @@ const _ADZ = { id:'50dc73db', key:'ca98692ac3f98547ad098d91133608e6' };
    web3forms.com (enter your email, key arrives instantly) to start receiving applications. */
 const _W3F = { key: '' };
 window._W3F = _W3F;
-const _SITEQ = { dietitian:'dietitian', electrician:'electrician', teaching:'teacher', company:'' };
+const _SITEQ = { dietitian:'dietitian', electrician:'electrician', teaching:'teacher', company:'', jobsure:'' };
 const _ST = {Alabama:'AL',Alaska:'AK',Arizona:'AZ',Arkansas:'AR',California:'CA',Colorado:'CO',Connecticut:'CT',Delaware:'DE',Florida:'FL',Georgia:'GA',Hawaii:'HI',Idaho:'ID',Illinois:'IL',Indiana:'IN',Iowa:'IA',Kansas:'KS',Kentucky:'KY',Louisiana:'LA',Maine:'ME',Maryland:'MD',Massachusetts:'MA',Michigan:'MI',Minnesota:'MN',Mississippi:'MS',Missouri:'MO',Montana:'MT',Nebraska:'NE',Nevada:'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND',Ohio:'OH',Oklahoma:'OK',Oregon:'OR',Pennsylvania:'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD',Tennessee:'TN',Texas:'TX',Utah:'UT',Vermont:'VT',Virginia:'VA',Washington:'WA','West Virginia':'WV',Wisconsin:'WI',Wyoming:'WY'};
 function _adzMap(item){
   const area = (item.location && item.location.area) || [];

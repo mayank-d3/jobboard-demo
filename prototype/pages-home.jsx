@@ -160,7 +160,7 @@ function GenericHome({ site }){
       <section className="section hero" style={{background:'var(--accent-soft-2)',borderBottom:'1px solid var(--line)'}}>
         <div className="wrap" style={{maxWidth:880,textAlign:'center'}}>
           <span className="eyebrow reveal" style={{justifyContent:'center'}}><span className="edot"></span>{site.totalJobs.toLocaleString('en-US')} jobs · updated daily</span>
-          <h1 className="reveal" style={{animationDelay:'.05s',fontSize:'clamp(38px,5.6vw,64px)',marginTop:12,letterSpacing:'-0.04em',lineHeight:1.02}}>Find a job that<br/><span className="ac">fits your life.</span></h1>
+          <h1 className="reveal" style={{animationDelay:'.05s',fontSize:'clamp(38px,5.6vw,64px)',marginTop:12,letterSpacing:'-0.04em',lineHeight:1.02}}>{site.heroTitle ? <>{site.heroTitle.lead}<br/><span className="ac">{site.heroTitle.accent}</span></> : <>Find a job that<br/><span className="ac">fits your life.</span></>}</h1>
           <p className="lede reveal" style={{animationDelay:'.1s',margin:'var(--s5) auto 0',maxWidth:'52ch'}}>{site.tagline}</p>
           <div style={{marginTop:'var(--s8)'}}><GenericSearch site={site}/></div>
           <div className="reveal" style={{animationDelay:'.2s',marginTop:'var(--s5)',display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap',alignItems:'center'}}>
