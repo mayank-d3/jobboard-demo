@@ -21,7 +21,7 @@ function PostJob({ site }){
         <div className="wrap" style={{textAlign:'center',maxWidth:760}}>
           <span className="eyebrow" style={{justifyContent:'center'}}>For employers</span>
           <h1 style={{fontSize:'clamp(30px,4.4vw,46px)',marginTop:12}}>Hire {site.mode==='generic'?'great people':`the right ${site.roleNoun}`}, faster.</h1>
-          <p className="lede" style={{margin:'var(--s4) auto 0',maxWidth:'48ch'}}>Reach candidates who are actively looking. Post in minutes — pick a plan that fits the role.</p>
+          <p className="lede" style={{margin:'var(--s4) auto 0',maxWidth:'48ch'}}>Reach candidates who are actively looking. Post in minutes and pick a plan that fits the role.</p>
           <div className="stat-row" style={{justifyContent:'center',marginTop:'var(--s8)'}}>
             <div className="st center"><div className="n tnum">{(site.totalJobs*5).toLocaleString('en-US')}</div><div className="l">Monthly seekers</div></div>
             <div className="st center"><div className="n tnum">{site.employers.length*40+120}+</div><div className="l">Employers hiring</div></div>
@@ -51,7 +51,7 @@ function PostJob({ site }){
                   ))}
                 </div>
                 <button className={'btn btn-block '+(plan===p.id?'btn-primary':'btn-ghost')} onClick={()=>{ setPlan(p.id); const el=document.getElementById('postform'); if(el) window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - 76); }}>
-                  {plan===p.id?'Selected — scroll to form':`Choose ${p.name}`}
+                  {plan===p.id?'Selected, scroll to form':`Choose ${p.name}`}
                 </button>
               </div>
             ))}
@@ -135,7 +135,7 @@ function SalaryTool({ site }){
       <Crumbs site={site} items={[{label:'Salary tool'}]}/>
       <section style={{paddingBottom:'var(--s16)'}}>
         <div className="wrap" style={{maxWidth:920}}>
-          <SectionHead eyebrow="Salary tool" title={`What ${site.mode==='generic'?'does this job':'should you'} pay?`} sub={`Estimate ${site.mode==='generic'?'salaries':site.roleNoun+' pay'} by role, location, and experience — based on current listings.`} />
+          <SectionHead eyebrow="Salary tool" title={`What ${site.mode==='generic'?'does this job':'should you'} pay?`} sub={`Estimate ${site.mode==='generic'?'salaries':site.roleNoun+' pay'} by role, location, and experience, based on current listings.`} />
           <div className="salary-grid">
             <div className="card card-pad" style={{display:'flex',flexDirection:'column',gap:'var(--s4)'}}>
               <div className="field"><label>Role</label><select className="select" value={role} onChange={e=>setRole(e.target.value)}>{roles.map(r=><option key={r}>{r}</option>)}</select></div>
@@ -186,7 +186,7 @@ function GuidePage({ site }){
         <div className="wrap" style={{maxWidth:760}}>
           <span className="eyebrow">{site.mode==='generic'?'Career advice':'Guides & resources'}</span>
           <h1 style={{fontSize:'clamp(30px,4.4vw,46px)',marginTop:12}}>{site.mode==='generic'?'Advice to move your career forward':`Everything about becoming a ${site.roleNoun}`}</h1>
-          <p className="lede" style={{marginTop:'var(--s4)'}}>Clear, practical guides on training, licensing, pay, and landing the role — written for people in the field.</p>
+          <p className="lede" style={{marginTop:'var(--s4)'}}>Clear, practical guides on training, licensing, pay, and landing the role, written for people in the field.</p>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ function AboutPage({ site }){
         <div className="wrap" style={{maxWidth:760}}>
           <span className="eyebrow">About us</span>
           <h1 style={{fontSize:'clamp(30px,4.4vw,46px)',marginTop:12}}>An independent job board, built for one community.</h1>
-          <p className="lede" style={{marginTop:'var(--s4)'}}>{site.name} exists to connect {site.mode==='generic'?'job seekers and employers across every industry':`${site.roleNoun}s with employers who value their work`} — without the noise of a general-purpose site.</p>
+          <p className="lede" style={{marginTop:'var(--s4)'}}>{site.name} exists to connect {site.mode==='generic'?'job seekers and employers across every industry':`${site.roleNoun}s with employers who value their work`}, without the noise of a general-purpose site.</p>
         </div>
       </section>
 
@@ -274,7 +274,7 @@ function AboutPage({ site }){
                 <div style={{fontFamily:'var(--font-head)',fontWeight:700,fontSize:18}}>Contact us</div>
                 <p style={{color:'var(--ink-3)',fontSize:14,marginTop:6}}>Questions, feedback, or press? We read every message.</p>
                 {sent ? (
-                  <div style={{display:'flex',alignItems:'center',gap:10,color:'var(--success)',marginTop:'var(--s5)'}}><Icon name="check" size={20}/>Thanks — we’ll be in touch.</div>
+                  <div style={{display:'flex',alignItems:'center',gap:10,color:'var(--success)',marginTop:'var(--s5)'}}><Icon name="check" size={20}/>Thanks, we’ll be in touch.</div>
                 ) : (
                   <form onSubmit={e=>{e.preventDefault(); setSent(true);}} style={{display:'flex',flexDirection:'column',gap:'var(--s3)',marginTop:'var(--s5)'}}>
                     <div className="field"><label>Name</label><input className="input" required placeholder="Your name"/></div>
@@ -313,14 +313,14 @@ function NotFound({ site }){
 
 /* ---------- Coming soon (one reusable pattern for deferred features) ---------- */
 const SOON = {
-  signin:    { side:'seeker', icon:'user', name:'Accounts', line:'Job-seeker and employer accounts and sign-in are on the way. For now, you can browse and apply to any job — no account needed.' },
+  signin:    { side:'seeker', icon:'user', name:'Accounts', line:'Job-seeker and employer accounts and sign-in are on the way. For now, you can browse and apply to any job. No account needed.' },
   register:  { side:'seeker', icon:'user', name:'Accounts', line:'Creating an account is coming soon. Today, you can apply to any role directly with your email and resume.' },
   profile:   { side:'seeker', icon:'users', name:'Job-seeker profiles', line:'Soon you’ll build a profile and let employers find you. For now, apply directly to any listing in seconds.' },
-  saved:     { side:'seeker', icon:'bookmark', name:'Saved jobs', line:'A place to save and track the roles you love — across visits — is coming soon. For now, saved jobs last for this session.' },
+  saved:     { side:'seeker', icon:'bookmark', name:'Saved jobs', line:'A place to save and track the roles you love across visits is coming soon. For now, saved jobs last for this session.' },
   account:   { side:'seeker', icon:'user', name:'Your account', line:'A personal dashboard for your applications and alerts is coming soon. Today, set up an email alert and apply to any job.' },
   'employer-dashboard': { side:'employer', icon:'building', name:'The employer dashboard', line:'Managing all your listings, applicants, and billing in one place is coming soon. For now, posting a job takes just a few minutes.' },
   candidates:{ side:'employer', icon:'search', name:'Candidate search', line:'Searching our candidate database to reach out directly is coming soon. Today, post a role and qualified applicants come to you.' },
-  manage:    { side:'employer', icon:'doc', name:'Listing management', line:'Editing, pausing, and renewing your live listings is coming soon. For now, post a new role anytime — it’s live within minutes.' },
+  manage:    { side:'employer', icon:'doc', name:'Listing management', line:'Editing, pausing, and renewing your live listings is coming soon. For now, post a new role anytime, and it’s live within minutes.' },
 };
 function ComingSoon({ site, feature }){
   const f = SOON[feature] || { side:'seeker', icon:'sparkle', name:'This feature', line:'This part of the experience is coming soon. In the meantime, everything you need to find and apply for jobs is ready to go.' };
@@ -338,7 +338,7 @@ function ComingSoon({ site, feature }){
           <h1>{f.name} {f.name.endsWith('s') ? 'are' : 'is'} coming soon</h1>
           <p className="cs-line">{f.line}</p>
           {ok ? (
-            <div className="cs-ok"><Icon name="check" size={18}/> Thanks — we’ll let you know the moment it’s live.</div>
+            <div className="cs-ok"><Icon name="check" size={18}/> Thanks, we’ll let you know the moment it’s live.</div>
           ) : (
             <form className="cs-form" onSubmit={e=>{e.preventDefault(); if(v.includes('@')) setOk(true);}}>
               <input className="input" type="email" placeholder="you@email.com" value={v} onChange={e=>setV(e.target.value)} required/>

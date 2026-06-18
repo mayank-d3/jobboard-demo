@@ -279,7 +279,7 @@ VERTICALS.jobsure = {
   key:'jobsure',
   name:'JobSure',
   domain:'jobsure.com',
-  tagline:'Search thousands of roles from verified employers across every industry — and apply with confidence.',
+  tagline:'Search thousands of roles from verified employers across every industry, and apply with confidence.',
   heroTitle:{ lead:'Your next job.', accent:'For sure.' },
   totalJobs: 21480,
 };

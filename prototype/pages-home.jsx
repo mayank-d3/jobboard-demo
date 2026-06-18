@@ -35,7 +35,7 @@ function HeroArt({ site }){
       <div className="ha-float reveal" style={{animationDelay:'0.4s'}}>
         <span className="pulse"></span>
         <div style={{fontSize:13.5}}>
-          <strong style={{fontFamily:'var(--font-head)'}} className="tnum">{loading ? '—' : (site.jobs.length*3+4)}</strong> new this week
+          <strong style={{fontFamily:'var(--font-head)'}} className="tnum">{loading ? '…' : (site.jobs.length*3+4)}</strong> new this week
         </div>
       </div>
     </div>

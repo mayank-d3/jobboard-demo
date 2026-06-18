@@ -164,7 +164,7 @@ function Header({ site, page }){
               <a href={href(site.key)} className="seg active" aria-current="true">Job seekers</a>
               <span className="seg disabled" role="button" aria-disabled="true" tabIndex={0} onClick={(e)=>e.preventDefault()}>
                 Employers <Icon name="lock" size={12} stroke={2}/>
-                <span className="aud-tip" role="tooltip">Coming soon — employer tools aren’t available yet.</span>
+                <span className="aud-tip" role="tooltip">Coming soon. Employer tools aren’t available yet.</span>
               </span>
             </div>
             <a href={href(site.key,'soon','signin')} className="btn btn-ghost btn-sm hide-sm">Sign in</a>
