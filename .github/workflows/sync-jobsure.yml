@@ -1,0 +1,73 @@
+name: Sync prototype to jobsure
+
+# Mirrors prototype/ from this repo into the root of mayank-d3/jobsure, which is
+# what GitHub Pages serves at jobsure.com. The source of truth is always
+# prototype/ here; the jobsure repo is generated and must not be hand-edited.
+# CNAME, .nojekyll, and README are re-asserted on every run so a sync can never
+# drop the custom-domain mapping or its IP.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/**'
+      - '.github/workflows/sync-jobsure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-jobsure
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out jobboard-demo
+        uses: actions/checkout@v4
+
+      - name: Configure deploy key
+        env:
+          DEPLOY_KEY: ${{ secrets.JOBSURE_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/jobsure_deploy
+          chmod 600 ~/.ssh/jobsure_deploy
+          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Mirror prototype/ into jobsure repo root
+        env:
+          GIT_SSH_COMMAND: ssh -i ~/.ssh/jobsure_deploy -o IdentitiesOnly=yes
+        run: |
+          set -euo pipefail
+          git clone --depth 1 git@github.com:mayank-d3/jobsure.git target
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='CNAME' \
+            --exclude='.nojekyll' \
+            --exclude='README.md' \
+            prototype/ target/
+          # Re-assert the domain markers + README every run so a sync can never drop them
+          printf 'jobsure.com\n' > target/CNAME
+          : > target/.nojekyll
+          {
+            echo '# jobsure'
+            echo
+            echo 'Live deployment of JobSure (https://jobsure.com).'
+            echo
+            echo 'Generated mirror of `jobboard-demo/prototype/`. Do not hand-edit this repo.'
+            echo 'Edit the source in jobboard-demo; this is synced automatically by'
+            echo '.github/workflows/sync-jobsure.yml on every push to main.'
+          } > target/README.md
+          cd target
+          git config user.name "jobsure-sync"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to mirror."
+          else
+            git commit -m "sync: jobboard-demo@${GITHUB_SHA:0:7}"
+            git push origin HEAD:main
+          fi
