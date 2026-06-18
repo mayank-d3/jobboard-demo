@@ -43,10 +43,29 @@ function Launcher(){
     <div className="launcher">
       <div className="launcher-inner">
         <div className="reveal">
-          <span className="lx-eyebrow"><span className="edot"></span>Prototype · one template, four configurations</span>
-          <h1>One job-board template,<br/>configured four ways.</h1>
-          <p className="lx-sub">Same layout, type, and component system across all four — only the brand, accent color, copy, and listings change. Pick a site to explore. Niche sites lead with browsing; the generic site leads with search.</p>
+          <span className="lx-eyebrow"><span className="edot"></span>Prototype · one template, every brand</span>
+          <h1>One job-board template,<br/>skinned for any brand.</h1>
+          <p className="lx-sub">JobSure is the live launch brand. The same layout, type, and component system runs the demo configurations below; only the brand, accent color, fonts, copy, and listings change.</p>
         </div>
+        <a href={href('jobsure')} data-site="jobsure" className="site-card site-card-feat reveal" style={{...accentVars(SITE_ACCENT.jobsure), fontFamily:"'Plus Jakarta Sans', system-ui, sans-serif"}}>
+          <div className="scf-main">
+            <div className="sc-top">
+              <span className="mono" style={{background:'var(--accent)',width:54,height:54,borderRadius:16}}>
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" strokeWidth="2.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.3 4.3L19 7"></path></svg>
+              </span>
+              <div className="sc-id">
+                <div className="scf-badge"><span className="edot"></span>Live brand</div>
+                <div className="sc-name" style={{fontSize:26}}>JobSure</div>
+                <div className="sc-domain">jobsure.com · your next job, for sure</div>
+              </div>
+            </div>
+            <p className="sc-desc" style={{maxWidth:'52ch'}}>A general, all-industries job board skinned as JobSure: trustworthy, warm, and modern. Search-first home, category grid, featured and latest jobs, salary tool, and guides.</p>
+          </div>
+          <div className="scf-side">
+            <span className="sc-go" style={{fontSize:15}}>Open JobSure <Icon name="arrow" size={16}/></span>
+          </div>
+        </a>
+        <div className="launcher-sep"><span>Demo configurations</span></div>
         <div className="launcher-grid">
           {order.map((k)=>{
             const s = SITES[k];

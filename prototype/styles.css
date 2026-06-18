@@ -489,6 +489,15 @@ code { font-family: var(--font-body); }
 .launcher .lx-note { margin-top: 34px; color:var(--ink-3); font-size:13.5px; display:flex; gap:22px; flex-wrap:wrap; align-items:center; }
 .launcher .lx-note code { background:var(--paper-2); color:var(--ink-2); padding:3px 9px; border-radius:7px; font-family:var(--font-body); }
 .launcher .lx-note .ni { display:inline-flex; align-items:center; gap:8px; }
+/* featured launcher card (JobSure live brand) */
+.site-card-feat { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-top: clamp(28px,4vh,44px); padding:30px; border-color:var(--accent-soft); background:linear-gradient(120deg, var(--accent-soft-2), var(--surface) 56%); }
+.site-card-feat:hover { border-color:var(--accent); }
+.site-card-feat .scf-main { display:flex; flex-direction:column; gap:16px; }
+.site-card-feat .scf-side { flex:none; }
+.scf-badge { display:inline-flex; align-items:center; gap:7px; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-ink); margin-bottom:6px; white-space:nowrap; }
+.launcher-sep { display:flex; align-items:center; gap:14px; margin:30px 0 4px; color:var(--ink-4); font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.launcher-sep::before, .launcher-sep::after { content:""; height:1px; background:var(--line-2); flex:1; }
+@media (max-width:680px){ .site-card-feat { flex-direction:column; align-items:flex-start; gap:18px; } }
 
 /* ---------- Misc ---------- */
 .divider { height:1px; background: var(--line); border:0; margin: 0; }
