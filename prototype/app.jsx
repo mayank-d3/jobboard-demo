@@ -142,6 +142,9 @@ function App(){
   const [route,setRoute] = useState(parseHash());
   const [t,setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [liveVer,setLiveVer] = useState(0); // bump to re-render after live/snapshot jobs load
+  // Prototype host (gh-pages / local) shows the multi-site launcher + Tweaks.
+  // Any real deploy (jobsure.com or a preview host) opens straight into JobSure.
+  const SHOW_LAUNCHER = /(^|\.)github\.io$/i.test(location.hostname) || /^(localhost$|127\.|\[?::1|0\.0\.0\.0)/.test(location.hostname) || location.protocol==='file:';
 
   useEffect(()=>{
     const h = ()=> setRoute(parseHash());
@@ -183,6 +186,9 @@ function App(){
     else if(page==='about'){ window.track('about_viewed', {site}); }
     else { window.track('homepage_viewed', {site}); }
   },[route.raw]);
+
+  // Production host with no route: land on JobSure, skip the demo launcher.
+  useEffect(()=>{ if(!route.site && !SHOW_LAUNCHER) navigate(href('jobsure')); },[]);
 
 
   const onSite = !!route.site && !!SITES[route.site];
@@ -231,6 +237,7 @@ function App(){
   );
 
   if(!onSite){
+    if(!SHOW_LAUNCHER) return <div style={rootStyle}/>;   // jobsure.com etc.: redirecting to #/jobsure
     return <div style={rootStyle}>{<Launcher/>}{panel}</div>;
   }
 
@@ -243,7 +250,7 @@ function App(){
         <SitePages route={route} modeOverride={modeOverride} />
       </main>
       <Footer site={site} />
-      {panel}
+      {SHOW_LAUNCHER && panel}
     </div>
   );
 }
