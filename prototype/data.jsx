@@ -478,10 +478,19 @@ function _diversify(jobs, limit){
   while(out.length<limit && go){ go=false; for(const q of qs){ if(q.length){ out.push(q.shift()); go=true; if(out.length>=limit) break; } } }
   out.forEach((j,i)=>{ j.featured = i<6; }); return out;
 }
+const _JOBS_TARGET  = 300;            // live jobs shown per site
+const _JOBS_PAGES   = 7;              // Adzuna pages to pull (50 each) => up to 350 raw before dedupe
+const _JOBS_CACHE_V = 'v2';           // bump to invalidate cached feeds after changing the fetch
+const _JOBS_TTL     = 30 * 60 * 1000; // 30 min browser cache, spares the Adzuna quota under traffic
 window.fetchLiveJobs = async function(siteKey){
+  const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}`;
+  try {
+    const hit = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+    if(hit && (Date.now()-hit.t) < _JOBS_TTL && Array.isArray(hit.jobs) && hit.jobs.length) return hit.jobs;
+  } catch(e){}
   const what = _SITEQ[siteKey] || '';
-  const urls = [1,2,3].map(p=>{
-    let u = `https://api.adzuna.com/v1/api/jobs/us/search/${p}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&where=us&content-type=application/json`;
+  const urls = Array.from({length:_JOBS_PAGES}, (_,i)=>{
+    let u = `https://api.adzuna.com/v1/api/jobs/us/search/${i+1}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&where=us&content-type=application/json`;
     if(what) u += `&what=${encodeURIComponent(what)}`;
     return u;
   });
@@ -489,5 +498,7 @@ window.fetchLiveJobs = async function(siteKey){
   const raw = pages.reduce((acc,d)=> acc.concat(d.results||[]), []);
   const seen = new Set();
   const mapped = raw.filter(it=>{ if(seen.has(it.id)) return false; seen.add(it.id); return true; }).map(_adzMap);
-  return _diversify(mapped, 24);
+  const out = _diversify(mapped, _JOBS_TARGET);
+  try { localStorage.setItem(cacheKey, JSON.stringify({ t: Date.now(), jobs: out })); } catch(e){}
+  return out;
 };

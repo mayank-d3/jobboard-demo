@@ -149,7 +149,7 @@ function GenericSearch({ site }){
 }
 function GenericHome({ site }){
   const featured = site.jobs.filter(j=>j.featured).slice(0,6);
-  const latest = [...site.jobs].sort((a,b)=>a.posted-b.posted).slice(0,6);
+  const latest = [...site.jobs].sort((a,b)=>a.posted-b.posted).slice(0,24);
   // niche sites have no `categories` — derive a grid from their roles so generic mode never crashes
   const cats = site.categories || site.roles.slice(0,8).map(r=>({ name:r.name, count:r.count, icon:'briefcase' }));
   const popular = site.categories

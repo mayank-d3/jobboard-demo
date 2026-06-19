@@ -195,7 +195,7 @@ function Browse({ site, query }){
   const [q,setQ] = useState(query.q||'');
   const [cityF,setCityF] = useState(query.city||'');
   const roleF = query.role||''; const catF = query.cat||'';
-  const PER = 8;
+  const PER = 300; // show the full live feed in one long scroll
 
   useEffect(()=>{ window.scrollTo(0,0); },[]);
   useEffect(()=>{ setPage(1); },[types,remoteOnly,levels,sort,q,cityF]);
