@@ -30,6 +30,15 @@ function parseHash(){
   return { site: segs[0]||'', page: segs[1]||'', rest: segs[2]||'', query, raw: location.hash };
 }
 
+/* Host gate: github.io / localhost show the multi-site demo launcher; any real host
+   (jobsure.com, previews) opens JobSure at the clean root with no #/jobsure redirect. */
+const SHOW_LAUNCHER = /(^|\.)github\.io$/i.test(location.hostname) || /^(localhost$|127\.|\[?::1|0\.0\.0\.0)/.test(location.hostname) || location.protocol==='file:';
+function resolveRoute(){
+  const r = parseHash();
+  if(!r.site && !SHOW_LAUNCHER) r.site = 'jobsure';   // jobsure.com root => JobSure home, URL stays clean
+  return r;
+}
+
 /* ---------- prototype index launcher ---------- */
 const SITE_BLURB = {
   dietitian:  'Niche healthcare board for registered dietitians. Browse-first — location and specialty lead, no big search bar.',
@@ -139,15 +148,12 @@ const DENSITY = { compact:0.86, regular:1, comfortable:1.14 };
 const RADIUS = { sharp:0.28, rounded:0.7, soft:1.05 };
 
 function App(){
-  const [route,setRoute] = useState(parseHash());
+  const [route,setRoute] = useState(resolveRoute());
   const [t,setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [liveVer,setLiveVer] = useState(0); // bump to re-render after live/snapshot jobs load
-  // Prototype host (gh-pages / local) shows the multi-site launcher + Tweaks.
-  // Any real deploy (jobsure.com or a preview host) opens straight into JobSure.
-  const SHOW_LAUNCHER = /(^|\.)github\.io$/i.test(location.hostname) || /^(localhost$|127\.|\[?::1|0\.0\.0\.0)/.test(location.hostname) || location.protocol==='file:';
 
   useEffect(()=>{
-    const h = ()=> setRoute(parseHash());
+    const h = ()=> setRoute(resolveRoute());
     window.addEventListener('hashchange', h);
     return ()=> window.removeEventListener('hashchange', h);
   },[]);
@@ -186,10 +192,6 @@ function App(){
     else if(page==='about'){ window.track('about_viewed', {site}); }
     else { window.track('homepage_viewed', {site}); }
   },[route.raw]);
-
-  // Production host with no route: land on JobSure, skip the demo launcher.
-  useEffect(()=>{ if(!route.site && !SHOW_LAUNCHER) navigate(href('jobsure')); },[]);
-
 
   const onSite = !!route.site && !!SITES[route.site];
   const site = onSite ? SITES[route.site] : null;
