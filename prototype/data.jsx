@@ -467,7 +467,7 @@ function _adzMap(item){
   const type = item.contract_time==='part_time' ? 'Part-time' : item.contract_type==='contract' ? 'Contract' : 'Full-time';
   const hasSal = item.salary_min && item.salary_max;
   return { id:'adz-'+item.id, title:item.title, company:(item.company&&item.company.display_name)||'Confidential',
-    companyId: slug((item.company&&item.company.display_name)||'company'), city, st, remote, type, level:'',
+    companyId: slug((item.company&&item.company.display_name)||'company'), city, st, remote, type, level:'', category:(item.category&&item.category.label)||'',
     salLo: hasSal?Math.round(item.salary_min):null, salHi: hasSal?Math.round(item.salary_max):null, salUnit:'yr', hourly:null,
     posted: days, featured:false, tags:[type].concat(remote?['Remote']:[]),
     desc:{intro:(item.description||'').replace(/\s+/g,' ').trim(), resp:[], reqs:[]}, applyUrl:item.redirect_url };
@@ -480,7 +480,7 @@ function _diversify(jobs, limit){
 }
 const _JOBS_TARGET  = 300;            // live jobs shown per site
 const _JOBS_PAGES   = 7;              // Adzuna pages to pull (50 each) => up to 350 raw before dedupe
-const _JOBS_CACHE_V = 'v2';           // bump to invalidate cached feeds after changing the fetch
+const _JOBS_CACHE_V = 'v3';           // bump to invalidate cached feeds after changing the fetch
 const _JOBS_TTL     = 30 * 60 * 1000; // 30 min browser cache, spares the Adzuna quota under traffic
 window.fetchLiveJobs = async function(siteKey){
   const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}`;
