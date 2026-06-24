@@ -255,7 +255,7 @@ function FeaturedCard({ site, job }){
       <div className="jcard-title">{job.title}</div>
       <div className="jcard-tags">
         <span className="tag">{job.type}</span>
-        <span className="tag">{job.remote?'Remote':job.level}</span>
+        {(job.remote||job.level) && <span className="tag">{job.remote?'Remote':job.level}</span>}
         {job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
       </div>
       <div className="jcard-spacer"></div>
@@ -286,7 +286,7 @@ function JobCard({ site, job }){
         <div className="jc-meta">
           <span className="tag"><Icon name="pin" size={13}/>{job.remote?'Remote':`${job.city}, ${job.st}`}</span>
           <span className="tag">{job.type}</span>
-          <span className="tag">{job.level}</span>
+          {job.level && <span className="tag">{job.level}</span>}
           {job.featured && <span className="tag accent"><Icon name="star" size={11} stroke={2}/>Featured</span>}
         </div>
       </div>
