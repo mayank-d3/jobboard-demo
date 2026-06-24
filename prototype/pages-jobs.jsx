@@ -193,16 +193,15 @@ function Browse({ site, query }){
   const [page,setPage] = useState(1);
   const [filtersOpen,setFiltersOpen] = useState(false);
   const [q,setQ] = useState(query.q||'');
-  const [cityF,setCityF] = useState(''); // refine box; the metro itself is driven by query.city -> the live fetch
+  const [loc,setLoc] = useState(query.city||''); // location search box; submitting re-fetches that metro (sets query.city)
   const roleF = query.role||''; const catF = query.cat||'';
   const PER = 300; // show the full live feed in one long scroll
 
   useEffect(()=>{ window.scrollTo(0,0); },[]);
-  useEffect(()=>{ setPage(1); },[types,remoteOnly,levels,sort,q,cityF]);
+  useEffect(()=>{ setPage(1); },[types,remoteOnly,levels,sort,q,query.city,query.cat]);
 
   let results = site.jobs.filter(j=>{
     if(q){ const s=(j.title+' '+j.company).toLowerCase(); if(!s.includes(q.toLowerCase())) return false; }
-    if(cityF && !((j.city||'').toLowerCase().includes(cityF.toLowerCase()))) return false;
     if(roleF){ const rk=roleF.toLowerCase().split(/[ /]+/)[0]; if(!j.title.toLowerCase().includes(rk)) return false; }
     if(types.length && !types.includes(j.type)) return false;
     if(remoteOnly && !j.remote) return false;
@@ -217,24 +216,26 @@ function Browse({ site, query }){
   const pages = Math.max(1, Math.ceil(total/PER));
   const pageJobs = results.slice((page-1)*PER, page*PER);
 
-  const titleCity = cityF ? ` in ${cityF}` : '';
+  const titleCity = query.city ? ` in ${query.city}` : '';
   const titleRole = roleF || catF || (site.vertical==='Job'?'Jobs':site.vertical+' jobs');
   const heading = q ? `“${q}”${titleCity}` : `${titleRole}${titleCity}`;
 
   const toggle = (arr,setArr,val)=> setArr(a=> a.includes(val)? a.filter(x=>x!==val): [...a,val]);
-  const clearAll = ()=>{ setTypes([]); setRemote(false); setLevels([]); setQ(''); setCityF(''); };
+  const clearAll = ()=>{ setTypes([]); setRemote(false); setLevels([]); setQ(''); };
 
   return (
     <div>
       <Crumbs site={site} items={[{label:'Browse jobs',to:href(site.key,'jobs')},{label: q?`Search`:(titleRole+titleCity)}]}/>
       <section style={{paddingBottom:'var(--s16)'}}>
         <div className="wrap">
-          {/* search/refine bar */}
+          {/* search bar: keyword refines the loaded list live; submitting a location re-fetches that metro */}
           <div className="card card-pad" style={{marginBottom:'var(--s6)'}}>
-            <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
+            <form style={{display:'flex',gap:10,flexWrap:'wrap'}}
+              onSubmit={(e)=>{ e.preventDefault(); const ps=[]; if(catF) ps.push('cat='+encodeURIComponent(catF)); if(q.trim()) ps.push('q='+encodeURIComponent(q.trim())); if(loc.trim()) ps.push('city='+encodeURIComponent(loc.trim())); navigate(href(site.key,'jobs')+(ps.length?'?'+ps.join('&'):'')); }}>
               <div className="input-icon" style={{flex:'2 1 240px'}}><Icon name="search" size={18} className="ico"/><input className="input" placeholder="Job title, keyword, or company" value={q} onChange={e=>setQ(e.target.value)}/></div>
-              <div className="input-icon" style={{flex:'1 1 180px'}}><Icon name="pin" size={18} className="ico"/><input className="input" placeholder="City or state" value={cityF} onChange={e=>setCityF(e.target.value)}/></div>
-            </div>
+              <div className="input-icon" style={{flex:'1 1 180px'}}><Icon name="pin" size={18} className="ico"/><input className="input" placeholder="City or state" value={loc} onChange={e=>setLoc(e.target.value)}/></div>
+              <button type="submit" className="btn btn-primary" style={{flex:'none'}}>Search</button>
+            </form>
           </div>
 
           <div className="filters-mobile">
