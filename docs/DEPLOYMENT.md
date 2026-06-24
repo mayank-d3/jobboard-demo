@@ -73,6 +73,8 @@ Google Analytics 4 is wired into the site (`window.__GA_ID` in `prototype/index.
 
 Jobs are live from the Adzuna API, fetched in the browser in `prototype/data.jsx` (`window.fetchLiveJobs`). Current behavior: fetch 7 pages of 50 results (up to 350 raw), dedupe by id, then cap to 300 via `_diversify(mapped, _JOBS_TARGET)`. Tunable via the constants at the top of that function: `_JOBS_TARGET` (300), `_JOBS_PAGES` (7).
 
+**Location (IP-based, D3-7394):** by default the feed is localized to the visitor's US metro. `fetchLiveJobs(siteKey, where)` resolves the location as: explicit override, then IP geolocation, then national fallback. With no override it calls a free IP geo service (`ipwho.is`, fetched `no-store`) to get the city, then queries Adzuna with `where=<city>&distance=160` (km, about 100 miles). Overrides that set the metro: the home search box, the city chips, and a `?city=<city>` URL param. A non-US visitor or a failed lookup falls back to `where=us`. The jobs cache key includes the metro, and detection itself is never cached, so a VPN or location change is reflected on the next reload.
+
 Results are cached in `localStorage` for 30 minutes (`_JOBS_TTL`) so repeat visits do not re-hit the API. The cache is versioned with `_JOBS_CACHE_V`; bump it whenever you change the fetch so a deploy takes effect immediately instead of serving a stale cached feed.
 
 The Browse page (`prototype/pages-jobs.jsx`) shows the whole feed in one scroll (`PER = 300`, no pagination). The JobSure home lists 24 latest jobs (`pages-home.jsx`, GenericHome). Adzuna allows max 50 results per page, so N jobs needs ceil(N / 50) page requests, and each page is one API call per uncached visit.
