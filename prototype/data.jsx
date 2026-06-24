@@ -457,6 +457,7 @@ const _W3F = { key: '' };
 window._W3F = _W3F;
 const _SITEQ = { dietitian:'dietitian', electrician:'electrician', teaching:'teacher', company:'', jobsure:'' };
 const _ST = {Alabama:'AL',Alaska:'AK',Arizona:'AZ',Arkansas:'AR',California:'CA',Colorado:'CO',Connecticut:'CT',Delaware:'DE',Florida:'FL',Georgia:'GA',Hawaii:'HI',Idaho:'ID',Illinois:'IL',Indiana:'IN',Iowa:'IA',Kansas:'KS',Kentucky:'KY',Louisiana:'LA',Maine:'ME',Maryland:'MD',Massachusetts:'MA',Michigan:'MI',Minnesota:'MN',Mississippi:'MS',Missouri:'MO',Montana:'MT',Nebraska:'NE',Nevada:'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND',Ohio:'OH',Oklahoma:'OK',Oregon:'OR',Pennsylvania:'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD',Tennessee:'TN',Texas:'TX',Utah:'UT',Vermont:'VT',Virginia:'VA',Washington:'WA','West Virginia':'WV',Wisconsin:'WI',Wyoming:'WY'};
+function _shortCat(label){ return String(label||'').replace(/\s*&.*$/,'').replace(/,.*$/,'').replace(/\s*jobs?$/i,'').trim(); }
 function _adzMap(item){
   const area = (item.location && item.location.area) || [];
   const city = area[area.length-1] || ((item.location && item.location.display_name) || '').split(',')[0] || '';
@@ -467,7 +468,7 @@ function _adzMap(item){
   const type = item.contract_time==='part_time' ? 'Part-time' : item.contract_type==='contract' ? 'Contract' : 'Full-time';
   const hasSal = item.salary_min && item.salary_max;
   return { id:'adz-'+item.id, title:item.title, company:(item.company&&item.company.display_name)||'Confidential',
-    companyId: slug((item.company&&item.company.display_name)||'company'), city, st, remote, type, level:'', category:(item.category&&item.category.label)||'',
+    companyId: slug((item.company&&item.company.display_name)||'company'), city, st, remote, type, level:'', category:(item.category&&item.category.label)||'', industry:_shortCat(item.category&&item.category.label),
     salLo: hasSal?Math.round(item.salary_min):null, salHi: hasSal?Math.round(item.salary_max):null, salUnit:'yr', hourly:null,
     posted: days, featured:false, tags:[type].concat(remote?['Remote']:[]),
     desc:{intro:(item.description||'').replace(/\s+/g,' ').trim(), resp:[], reqs:[]}, applyUrl:item.redirect_url };
