@@ -480,7 +480,7 @@ function _diversify(jobs, limit){
 }
 const _JOBS_TARGET  = 300;            // live jobs shown per site
 const _JOBS_PAGES   = 7;              // Adzuna pages to pull (50 each) => up to 350 raw before dedupe
-const _JOBS_CACHE_V = 'v4';           // bump to invalidate cached feeds after changing the fetch
+const _JOBS_CACHE_V = 'v5';           // bump to invalidate cached feeds after changing the fetch
 const _JOBS_TTL     = 30 * 60 * 1000; // 30 min browser cache, spares the Adzuna quota under traffic
 // Detect the visitor's US metro from their IP (free, HTTPS, no key). Fetched no-store so a
 // VPN switch is reflected on reload. Returns "City, ST" for US visitors, else '' (national).
@@ -497,13 +497,21 @@ async function detectCity(){
   } catch(e){}
   return '';
 }
-// where: explicit location override (e.g. ?city=Chicago). If empty, default to the visitor's
-// IP metro; if detection fails or is non-US, fall back to the national feed (where=us).
-window.fetchLiveJobs = async function(siteKey, where){
+// Maps each "browse by industry" tile to an Adzuna category tag, so clicking a category
+// queries Adzuna for that industry directly instead of filtering the (skewed) generic feed.
+const CAT_ADZ = {
+  'Healthcare':'healthcare-nursing-jobs', 'Skilled Trades':'trade-construction-jobs',
+  'Education':'teaching-jobs', 'Technology':'it-jobs', 'Finance':'accounting-finance-jobs',
+  'Retail':'retail-jobs', 'Logistics':'logistics-warehouse-jobs', 'Hospitality':'hospitality-catering-jobs',
+};
+// where: explicit location override (e.g. ?city=Chicago); empty => the visitor's IP metro, else national.
+// cat:   an industry tile name (e.g. "Skilled Trades"); when set, query Adzuna for that category.
+window.fetchLiveJobs = async function(siteKey, where, cat){
   let loc = (where||'').trim();
   if(!loc) loc = await detectCity();
   window.__jobCity = loc;                       // surfaced for any UI that wants to show it
-  const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}:${(loc||'us').toLowerCase()}`;
+  const catTag = cat ? (CAT_ADZ[cat] || '') : '';
+  const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}:${(loc||'us').toLowerCase()}:${catTag||'all'}`;
   try {
     const hit = JSON.parse(localStorage.getItem(cacheKey) || 'null');
     if(hit && (Date.now()-hit.t) < _JOBS_TTL && Array.isArray(hit.jobs) && hit.jobs.length) return hit.jobs;
@@ -512,6 +520,7 @@ window.fetchLiveJobs = async function(siteKey, where){
   const urls = Array.from({length:_JOBS_PAGES}, (_,i)=>{
     let u = `https://api.adzuna.com/v1/api/jobs/us/search/${i+1}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&content-type=application/json`;
     u += loc ? `&where=${encodeURIComponent(loc)}&distance=160` : `&where=us`;
+    if(catTag) u += `&category=${catTag}`;
     if(what) u += `&what=${encodeURIComponent(what)}`;
     return u;
   });

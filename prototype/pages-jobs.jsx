@@ -184,18 +184,6 @@ function SalaryMini({ site }){
 }
 
 /* ---------- Browse results ---------- */
-// Maps each "browse by industry" tile to keywords matched against a job's
-// Adzuna category label + title, so clicking a category actually filters.
-const CAT_KEYWORDS = {
-  'Healthcare':    ['health','nurse','nursing','medical','clinical','dental','therapist','physician','pharmacy','caregiver','patient'],
-  'Skilled Trades':['trade','electric','plumb','hvac','weld','construction','mechanic','carpenter','maintenance','installer','technician'],
-  'Education':     ['teach','education','school','tutor','professor','instructor','faculty','classroom','lecturer'],
-  'Technology':    ['it jobs','software','developer','programmer','data ','devops','information technology','cloud','cyber','web develop'],
-  'Finance':       ['account','finance','financial','audit','bank','bookkeep','investment','actuar'],
-  'Retail':        ['retail','store','cashier','merchandis','sales associate','clerk'],
-  'Logistics':     ['logistic','warehouse','driver','supply chain','forklift','delivery','cdl','dispatch','freight'],
-  'Hospitality':   ['hospitality','hotel','restaurant','chef','server','cook','barista','catering','housekeep','front desk','bartender'],
-};
 function Browse({ site, query }){
   const initType = []; 
   const [types,setTypes] = useState(initType);
@@ -216,11 +204,6 @@ function Browse({ site, query }){
     if(q){ const s=(j.title+' '+j.company).toLowerCase(); if(!s.includes(q.toLowerCase())) return false; }
     if(cityF && !((j.city||'').toLowerCase().includes(cityF.toLowerCase()))) return false;
     if(roleF){ const rk=roleF.toLowerCase().split(/[ /]+/)[0]; if(!j.title.toLowerCase().includes(rk)) return false; }
-    if(catF){
-      const kw = CAT_KEYWORDS[catF] || [catF.toLowerCase()];
-      const hay = ((j.category||'')+' '+(j.title||'')).toLowerCase();
-      if(!kw.some(k=>hay.includes(k))) return false;
-    }
     if(types.length && !types.includes(j.type)) return false;
     if(remoteOnly && !j.remote) return false;
     if(levels.length && !levels.includes(j.level)) return false;
