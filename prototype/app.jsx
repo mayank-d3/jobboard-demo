@@ -172,11 +172,11 @@ function App(){
     if(!route.site || !SITES[route.site]) return;
     let cancelled = false;
     window.__jobsLoading = true; setLiveVer(v=>v+1);
-    window.fetchLiveJobs(route.site)
+    window.fetchLiveJobs(route.site, route.query.city || '')
       .then(jobs=>{ if(cancelled) return; if(jobs && jobs.length) window.applyLiveJobs(route.site, jobs); window.__jobsLoading = false; setLiveVer(v=>v+1); })
       .catch(()=>{ if(!cancelled){ window.__jobsLoading = false; setLiveVer(v=>v+1); } });
     return ()=>{ cancelled = true; };
-  },[route.site]);
+  },[route.site, route.query.city]);
 
   // Rich analytics: fire a semantic *_view event on every route so GA shows what's actually viewed.
   useEffect(()=>{

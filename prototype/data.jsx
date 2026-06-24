@@ -480,17 +480,38 @@ function _diversify(jobs, limit){
 }
 const _JOBS_TARGET  = 300;            // live jobs shown per site
 const _JOBS_PAGES   = 7;              // Adzuna pages to pull (50 each) => up to 350 raw before dedupe
-const _JOBS_CACHE_V = 'v3';           // bump to invalidate cached feeds after changing the fetch
+const _JOBS_CACHE_V = 'v4';           // bump to invalidate cached feeds after changing the fetch
 const _JOBS_TTL     = 30 * 60 * 1000; // 30 min browser cache, spares the Adzuna quota under traffic
-window.fetchLiveJobs = async function(siteKey){
-  const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}`;
+// Detect the visitor's US metro from their IP (free, HTTPS, no key). Fetched no-store so a
+// VPN switch is reflected on reload. Returns "City, ST" for US visitors, else '' (national).
+async function detectCity(){
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(()=>ctrl.abort(), 2500);
+    const r = await fetch('https://ipwho.is/', { cache:'no-store', signal:ctrl.signal });
+    clearTimeout(t);
+    const d = await r.json();
+    if(d && d.success!==false && d.country_code==='US' && d.city){
+      return d.region_code ? (d.city + ', ' + d.region_code) : d.city;
+    }
+  } catch(e){}
+  return '';
+}
+// where: explicit location override (e.g. ?city=Chicago). If empty, default to the visitor's
+// IP metro; if detection fails or is non-US, fall back to the national feed (where=us).
+window.fetchLiveJobs = async function(siteKey, where){
+  let loc = (where||'').trim();
+  if(!loc) loc = await detectCity();
+  window.__jobCity = loc;                       // surfaced for any UI that wants to show it
+  const cacheKey = `jsjobs:${_JOBS_CACHE_V}:${siteKey}:${(loc||'us').toLowerCase()}`;
   try {
     const hit = JSON.parse(localStorage.getItem(cacheKey) || 'null');
     if(hit && (Date.now()-hit.t) < _JOBS_TTL && Array.isArray(hit.jobs) && hit.jobs.length) return hit.jobs;
   } catch(e){}
   const what = _SITEQ[siteKey] || '';
   const urls = Array.from({length:_JOBS_PAGES}, (_,i)=>{
-    let u = `https://api.adzuna.com/v1/api/jobs/us/search/${i+1}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&where=us&content-type=application/json`;
+    let u = `https://api.adzuna.com/v1/api/jobs/us/search/${i+1}?app_id=${_ADZ.id}&app_key=${_ADZ.key}&results_per_page=50&content-type=application/json`;
+    u += loc ? `&where=${encodeURIComponent(loc)}&distance=160` : `&where=us`;
     if(what) u += `&what=${encodeURIComponent(what)}`;
     return u;
   });
